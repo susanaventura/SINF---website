@@ -16,5 +16,6 @@
 // require move-top
 // require easing
 //= require js/bootstrap.js
+//= require custom
 // require startstop-slider
 //= require_tree .

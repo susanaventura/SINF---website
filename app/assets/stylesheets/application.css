@@ -15,5 +15,6 @@
  *= require css/bootstrap
  *= require style
  *= require slider
+ *= require custom
  *= require_self
  */
