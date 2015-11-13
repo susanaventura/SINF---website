@@ -1,17 +1,21 @@
 class User < ActiveRecord::Base
   attr_accessor :remember_token, :activation_token, :reset_token
-  attr_accessor :name
+  attr_accessor :name, :taxpayer_num, :address, :postal_address
   before_save :downcase_email
   before_create :create_activation_digest
 
   validates :username, presence: true, length: {maximum: 50}, uniqueness: {case_sensitive: false}
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates(:email,{ presence: true,
-            length: {maximum: 255},
-            format: {with: VALID_EMAIL_REGEX},
-            uniqueness: {case_sensitive: false}
-            })
+  validates(:email, {presence: true,
+                     length: {maximum: 255},
+                     format: {with: VALID_EMAIL_REGEX},
+                     uniqueness: {case_sensitive: false}
+  })
+
+  VALID_POSTAL_CODE_REGEX = /\A[0-9]{4}-[0-9]{3}\z/i
+  validates(:postal_address, {presence: true,
+                           format: {with: VALID_POSTAL_CODE_REGEX,  message: "is not valid. Format: XXXX-XXX"}})
 
   has_secure_password
   validates(:password, presence: true, length: {minimum: 6}, allow_nil: true)
