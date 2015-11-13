@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
   resources :users
-  resources :images
+  resources :images, path: 'pri_images'
+  
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
