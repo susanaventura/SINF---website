@@ -68,8 +68,9 @@
       <li class="dropdown">
         <a data-toggle="dropdown" class="dropdown-toggle" href="#">Categories</a>
         <ul class="dropdown-menu">
-          <li><a href="#">Category 1</a></li>
-          <li><a href="#">Category 2</a></li>
+		  <% @categories.each do |category| %>
+			<li><a href="#"><%=category['name']%></a></li>
+		  <%end%>
         </ul>
       </li>
       <li class="dropdown">

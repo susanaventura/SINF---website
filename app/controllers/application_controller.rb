@@ -4,4 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   include PrimaveraIntegrationHelper
+  
+  
+  before_filter :set_categories
+  def set_categories
+    @categories = get_categories
+  end
 end

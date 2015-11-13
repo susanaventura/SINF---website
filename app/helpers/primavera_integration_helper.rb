@@ -14,9 +14,9 @@ module PrimaveraIntegrationHelper
 	'http://localhost:49275/api/'+url
   end
   
-  def send_get(res)
+  def send_get(resource)
   
-	url = URI.parse(primavera_path('categories'))
+	url = URI.parse(primavera_path(resource))
 	req = Net::HTTP::Get.new(url.to_s)
 	
 	puts 'Sending GET request to ' + url.to_s
