@@ -177,10 +177,10 @@ body {
 .menu {
     float: left;
 }
-.menu li {
+.menu>ul>li {
     float:left;
 }
-.menu li a {
+.menu>ul>li>a {
     font-family: 'ambleregular';
     font-size:0.823em;
     text-transform:uppercase;
@@ -194,10 +194,10 @@ body {
     -ms-transition: all .9s;
     transition: all .9s;
 }
-.menu li a:hover,.menu li.active a{
+.menu>ul>li>a:hover,.menu>ul>li.active>a{
     background:#B81D22;
 }
-.menu li:first-child  a{
+.menu>ul>li:first-child  a{
     border-radius:6px 0 0 6px;
     -webkit-border-radius:6px 0 0 6px;
     -moz-border-rfadius:6px 0 0 6px;
