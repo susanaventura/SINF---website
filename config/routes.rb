@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#delete'
+  delete 'logout' => 'sessions#destroy'
 
 
   get 'checkout/overview' => 'orders#checkout_overview'

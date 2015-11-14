@@ -1,11 +1,19 @@
 <div class="headertop_desc">
   <div class="account_desc">
+    <% if logged_in? %>
+      <h3>  </h3>
+    <%end%>
     <ul>
-      <li><a href=<%= new_user_path %>>Register</a></li>
-      <li><a href="#">Login</a></li>
-      <li><a href="#">Delivery</a></li>
-      <li><a href="#">Checkout</a></li>
-      <li><a href="#">My Account</a></li>
+      <% if logged_in? %>
+          <li><%=current_user.username%></li>
+          <li><%= link_to 'My Account', user_path(current_user) %></li>
+          <li><%= link_to 'Delivery', '#' %></li>
+          <li><%= link_to 'Checkout', '#' %></li>
+          <li><%= link_to 'Log Out', logout_path, method: 'delete' %></li>
+      <%else%>
+          <li><%= link_to 'Login', login_path %></li>
+          <li><%= link_to 'Register', register_path %></li>
+      <% end %>
     </ul>
   </div>
   <div class="clear"></div>
@@ -13,7 +21,7 @@
 
 <div class="header_top">
   <div class="logo">
-    <a href=""><%=image_tag('website_logo.png')%></a>
+    <a href=<%=root_path%>><%=image_tag('website_logo.png')%></a>
   </div>
   <div class="cart">
     <p>Welcome to our Online Store! <span>Cart:</span>
