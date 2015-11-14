@@ -135,11 +135,11 @@ body {
     right: 0px;
     z-index:1;
     background:#EEE;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
     list-style: none;
     opacity: 0;
     pointer-events: none;
@@ -150,11 +150,11 @@ body {
     color: #333;
     font-size:0.823em;
     padding: 10px;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
 }
 .wrapper-dropdown-2 .dropdown li:hover a {
     color:red;
@@ -189,11 +189,11 @@ body {
     display:block;
     padding:16px 20px;
     border-right: 2px ridge #585858;
-    -webkit-transition: all .9s;
-    -moz-transition: all .9s;
-    -o-transition: all .9s;
-    -ms-transition: all .9s;
-    transition: all .9s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    -ms-transition: all .2s;
+    transition: all .2s;
 }
 .menu>ul>li>a:hover,.menu>ul>li.active>a{
     background:#B81D22;
@@ -229,7 +229,7 @@ body {
 .search_box form input[type="submit"] {
     border: none;
     cursor: pointer;
-    background: url(../images/search.png) no-repeat 0px 7px;
+    background: url(search.png) no-repeat 0px 7px;
     position: absolute;
     right: 0;
     width: 20px;
@@ -388,10 +388,10 @@ h2 {
     color: #FFF;
     text-decoration: none;
     outline: 0;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 .add-cart h4 a:hover{
     text-shadow: 0px 0px 1px #000;
@@ -751,10 +751,10 @@ h2 {
     color: #FFF;
     text-decoration: none;
     outline: 0;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 .span_3_of_2 .button a:hover, .product-tags .button a:hover {
     text-shadow: 0px 0px 1px #000;
@@ -844,10 +844,10 @@ h2 {
     border:none;
     cursor:pointer;
     outline: 0;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 .your-review input[type="submit"]:hover{
     text-shadow: 0px 0px 1px #000;
@@ -1283,10 +1283,10 @@ h2 {
     text-decoration: none;
     outline: 0;
     cursor:pointer;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
     position: absolute;
     right: 0;
 }
