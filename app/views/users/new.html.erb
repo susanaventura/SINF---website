@@ -25,14 +25,19 @@
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-6">
               <%= f.label :address, class: 'control-label' %>
               <%= f.text_field :address, class: 'form-control' %>
             </div>
 
             <div class="col-md-3">
+              <%= f.label :local, class: 'control-label' %>
+              <%= f.text_field :local, class: 'form-control' %>
+            </div>
+
+            <div class="col-md-3">
               <%= f.label :postal_address, class: 'control-label' %>
-              <%= f.text_field :postal_address, class: 'form-control', pattern: '/\A[0-9]{4}-[0-9]{3}\z/i' %>
+              <%= f.text_field :postal_address, class: 'form-control' %>
             </div>
           </div>
         </div>
@@ -41,17 +46,17 @@
           <%= f.text_field :username, class: 'form-control' %>
         </div>
         <div class="form-group">
-          <%= f.label :email %>
+          <%= f.label :email, class: 'control-label'  %>
           <%= f.email_field :email, class: 'form-control' %>
         </div>
         <div class="form-group">
           <div class="row">
             <div class="col-md-6">
-              <%= f.label :password %>
+              <%= f.label :password, class: 'control-label'  %>
               <%= f.password_field :password, class: 'form-control' %>
             </div>
             <div class="col-md-6">
-              <%= f.label :password_confirmation, "Confirmation" %>
+              <%= f.label :password_confirmation, "Confirmation", class: 'control-label'  %>
               <%= f.password_field :password_confirmation, class: 'form-control' %>
             </div>
           </div>

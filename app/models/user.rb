@@ -1,24 +1,31 @@
 class User < ActiveRecord::Base
   attr_accessor :remember_token, :activation_token, :reset_token
-  attr_accessor :name, :taxpayer_num, :address, :postal_address
-  before_save :downcase_email
-  before_create :create_activation_digest
+  attr_accessor :name, :taxpayer_num, :address, :local, :postal_address
+  before_save :downcase_email, :upcase_username
+
+  validates :name, presence: true, length: {maximum: 50}
+  VALID_TAXPAYER_NUM_REGEX = /\A[0-9]{9}\z/i
+  validates :taxpayer_num, format: {with: VALID_TAXPAYER_NUM_REGEX, message: 'is a 9 digit number.'}
+  validates :address, presence: true
+  validates :local, presence: true
 
   validates :username, presence: true, length: {maximum: 50}, uniqueness: {case_sensitive: false}
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates(:email, {presence: true,
-                     length: {maximum: 255},
+  validates(:email, {length: {maximum: 255},
                      format: {with: VALID_EMAIL_REGEX},
                      uniqueness: {case_sensitive: false}
   })
 
   VALID_POSTAL_CODE_REGEX = /\A[0-9]{4}-[0-9]{3}\z/i
-  validates(:postal_address, {presence: true,
-                           format: {with: VALID_POSTAL_CODE_REGEX,  message: "is not valid. Format: XXXX-XXX"}})
+  validates(:postal_address, {format: {with: VALID_POSTAL_CODE_REGEX,  message: 'is not valid. Format: XXXX-XXX'}})
 
   has_secure_password
   validates(:password, presence: true, length: {minimum: 6}, allow_nil: true)
+
+  def User.attributes
+    [:username, :email, :password, :password_confirmation] + [:name, :taxpayer_num, :address, :local, :postal_address]
+  end
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
@@ -44,28 +51,8 @@ class User < ActiveRecord::Base
     update_attribute(:remember_digest, nil)
   end
 
-  def activate
-    update_attribute(:activated, true)
-    update_attribute(:activated_at, Time.zone.now)
-  end
 
-  def send_activation_email
-    UserMailer.account_activation(self).deliver_now
-  end
 
-  def create_reset_digest
-    self.reset_token = User.new_token
-    update_attribute(:reset_digest, User.digest(reset_token))
-    update_attribute(:reset_sent_at, Time.zone.now)
-  end
-
-  def send_password_reset_email
-    UserMailer.password_reset(self).deliver_now
-  end
-
-  def password_reset_expired?
-    reset_sent_at < 2.hours.ago
-  end
 
   private
 
@@ -73,8 +60,8 @@ class User < ActiveRecord::Base
     self.email = email.downcase
   end
 
-  def create_activation_digest
-    self.activation_token = User.new_token
-    self.activation_digest = User.digest(activation_token)
+  def upcase_username
+    self.username = username.upcase
   end
+
 end
