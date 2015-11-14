@@ -280,7 +280,7 @@ body {
     padding: 20px 0;
     background: #FFF;
 }
-.content h2 {
+h2 {
     color: #383838;
     margin-bottom: 0.5em;
     font-size: 1.5em;
@@ -1095,6 +1095,7 @@ body {
     clear:both;
     padding:10px;
 }
+/*
 .panel{
     background:#222;
 }
@@ -1103,7 +1104,7 @@ body {
     font-size:0.95em;
     line-height: 1.8em;
     padding:5px 20px;
-}
+}*/
 /****** News **************************/
 .image {
     clear: both;

@@ -1,0 +1,89 @@
+<div class="panel panel-default order_list_products box-shadow--16dp">
+
+  <table class="table">
+
+    <tr class="table-row-highlighted table-cells-border">
+      <th>Product</th>
+      <th class="text-center">Price</th>
+      <th class="text-center">Quantity</th>
+      <th class="text-right">Total product price</th>
+    </tr>
+
+    <!-- PRODUCT -->
+    <tr>
+      <td>
+        <div class="media">
+          <div class="media-left">
+            <a href="#">
+              <img class="media-object" src="http://placehold.it/140x100" alt="product image">
+            </a>
+          </div>
+          <div class="media-body" style="width:50%">
+            <a href="#"><h4 class="media-heading order-product_name">product name</h4></a>
+            quantity or size per package
+          </div>
+        </div>
+      </td>
+      <td class="text-center">P1</td>
+      <td class="text-center">
+
+        <input type="number" value="0" min="0" max="100" step="1" class="custom-form-control">
+
+        <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+
+      </td>
+      <td class="text-right">P1</td>
+    </tr>
+    <!-- /PRODUCT -->
+
+    <tr class="table-row-highlighted table-cells-border">
+      <th colspan="3" style="border-top: 1px solid #B81D22">Total discount</th>
+      <th class="text-right" style="border-top: 1px solid #B81D22">P1</th>
+    </tr>
+
+    <% if !(defined?(overview) && overview) %>
+        <tr class="table-row-highlighted table-cells-border">
+    <% else %>
+        <tr class="table-row-highlighted">
+    <% end %>
+    <th colspan="3">Subtotal</th>
+    <th class="text-right">P1</th>
+    </tr>
+
+    <% if !(defined?(overview) && overview) %>
+        <tr class="table-row-highlighted table-cells-border">
+          <th colspan="3">
+            Shipping
+            <br>
+
+            <p style="padding-left:5px">
+              <small>Method: CTT</small>
+            </p>
+          </th>
+          <th class="text-right">0.00€</th>
+        </tr>
+
+        <tr class="table-row-highlighted">
+          <th colspan="3" class="text-right"><h2>Final Billing Value</h2></th>
+          <th class="text-right"><h2>P1</h2></th>
+        </tr>
+    <% end %>
+  </table>
+</div>
+
+<% if defined?(overview) && overview %>
+    <div class="form-group">
+      <div class="col-md-6 text-left">
+        <button class="btn btn-primary">Back to store</button>
+      </div>
+      <div class="col-md-6 text-right">
+        <button class="btn btn-primary">Checkout</button>
+      </div>
+    </div>
+<% else %>
+    <div class="form-group">
+      <div class="col-md-12 text-right">
+        <button class="btn btn-primary">Order</button>
+      </div>
+    </div>
+<% end %>
