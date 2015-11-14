@@ -1,7 +1,4 @@
 <div class="headertop_desc">
-  <div class="call">
-    <p><span>Need help?</span> call us <span class="number">1-22-3456789</span></p>
-  </div>
   <div class="account_desc">
     <ul>
       <li><a href=<%= new_user_path %>>Register</a></li>
@@ -16,8 +13,7 @@
 
 <div class="header_top">
   <div class="logo">
-    <!--<a href=""><img src="web/images/logo.png" alt=""/></a>-->
-    <p>LOGO</p>
+    <a href=""><%=image_tag('website_logo.png')%></a>
   </div>
   <div class="cart">
     <p>Welcome to our Online Store! <span>Cart:</span>
@@ -64,7 +60,7 @@
 <div class="header_bottom">
   <div class="menu">
     <ul>
-      <li><a href="#">Home</a></li>
+      <li><a href=<%=root_path%>>Home</a></li>
       <li class="dropdown">
         <a data-toggle="dropdown" class="dropdown-toggle" href="#">Categories</a>
         <ul class="dropdown-menu">

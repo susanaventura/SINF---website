@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#delete'
 
 
+  get 'checkout/overview' => 'orders#checkout_overview'
+  get 'checkout/preview' => 'orders#checkout_preview'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

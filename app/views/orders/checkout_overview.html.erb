@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-12 col-md-offset-1">
+    <h1 class="title-page">Your cart</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <hr>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12 col-md-offset-1">
+    <p>Until now you selected the following items:</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <%= render partial: 'layouts/order_items_list', locals:{overview: true}%>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+  </div>
+</div>
+
+</div>
