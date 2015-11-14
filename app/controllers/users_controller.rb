@@ -8,6 +8,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    if @user
+      @user.set_info_from_primavera(get_client(@user.username))
+    end
   end
 
   def new

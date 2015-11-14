@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151109152858) do
+ActiveRecord::Schema.define(version: 20151114221315) do
 
   create_table "images", force: :cascade do |t|
     t.string   "product"
@@ -22,10 +22,10 @@ ActiveRecord::Schema.define(version: 20151109152858) do
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
-    t.integer  "current_points"
+    t.integer  "current_points",  default: 0
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "email"
     t.string   "remember_digest"
   end

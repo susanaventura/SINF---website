@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessor :remember_token, :activation_token, :reset_token
   attr_accessor :name, :taxpayer_num, :address, :local, :postal_address
+  attr_accessor :currency, :op_zone
   before_save :downcase_email, :upcase_username
 
   validates :name, presence: true, length: {maximum: 50}
@@ -52,6 +53,19 @@ class User < ActiveRecord::Base
   end
 
 
+  #### PRIMAVERA INTEGRATION ####
+
+  def set_info_from_primavera(pri_client)
+    if pri_client
+      self.name = pri_client['Name']
+      self.address = pri_client['Address']
+      self.taxpayer_num = pri_client['Taxpayer_num']
+      self.postal_address = pri_client['Postal_Addr']
+      self.local = pri_client['Local']
+      self.currency = pri_client['Currency']
+      self.op_zone = pri_client['Op_Zone']
+    end
+  end
 
 
   private
