@@ -9,6 +9,14 @@ module PrimaveraIntegrationHelper
     parse_res(send_get("clients/#{id}"), nil)
   end
 
+  def get_product(id)
+    parse_res(send_get("products/#{id}"), nil)
+  end
+
+  def get_products(params)
+    parse_res(send_get("products?#{params.to_query}"), nil)
+  end
+
 
   def post_client(user)
     parse_res(send_post('clients', user_to_json(user)), nil, '201')

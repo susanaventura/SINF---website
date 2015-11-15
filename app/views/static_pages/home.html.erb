@@ -4,14 +4,7 @@
   <div class="row">
 
     <div class="col-md-3">
-      <div class="categories">
-        <ul>
-          <h3>Categories</h3>
-          <% @categories.each do |category| %>
-              <li><a href="#"><%= category['name'] %></a></li>
-          <% end %>
-        </ul>
-      </div>
+      <%= render partial: 'layouts/categories_list', locals: {categories: @categories} %>
     </div>
     <div class="col-md-9">
       <%= render 'layouts/slider' %>
@@ -28,7 +21,7 @@
             <div class="clear"></div>
           </div>
 
-          <%= render 'layouts/products_list' %>
+          <%= render partial:'layouts/products_list', locals: {products: []} %>
 
         </div>
       </div>

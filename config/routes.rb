@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
+  get 'home' => 'static_pages#home'
+  get 'products' => 'static_pages#products'
 
   get 'checkout/overview' => 'orders#checkout_overview'
   get 'checkout/preview' => 'orders#checkout_preview'

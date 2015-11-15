@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-md-3">
+    <%= render partial: 'layouts/categories_list', locals: {categories: @categories} %>
+  </div>
+  <div class="col-md-9">
+    <p><%= will_paginate @products %></p>
+      <%= page_entries_info @products, model: 'product' %>
+      <%= render partial: 'layouts/products_list', locals: {products: @products} %>
+      
+    <p><%= will_paginate @products %></p>
+  </div>
+</div>
