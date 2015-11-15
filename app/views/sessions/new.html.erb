@@ -25,15 +25,18 @@
           <%= f.password_field :password, class: 'form-control' %>
         </div>
 
-        <div class="form-group">
-          <%= f.label :remember_me, class: 'checkbox inline' do %>
-              <%= f.check_box :remember_me %>
-              <span>Remember me</span>
-          <%end%>
-        </div>
 
         <div class="form-group">
-          <%= f.submit 'Log in', class: 'btn btn-primary' %>
+          <div class="checkbox">
+            <%= f.label :remember_me do %>
+                <%= f.check_box :remember_me %>
+                <span>Remember me</span>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="form-group text-right">
+          <%= f.submit 'Log in', class: 'btn btn-primary btn-red' %>
         </div>
 
         <p>New user? <%= link_to 'Sign up now!', register_path %></p>
