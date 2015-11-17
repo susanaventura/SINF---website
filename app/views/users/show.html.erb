@@ -7,6 +7,35 @@
 
       <%= @user.inspect %>
 
+    <h1>My Account</h1>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        My Account 
+        Username: <%= @user.username %>
+      </div>
+      <div class="panel-body">My Orders</div>
+      <!--Table-->
+      <table class="table">
+        <div class="rows">
+          <div class="col-xs-6 col-md-3"></div>
+        </div>
+
+      </table>
+      <div class="panel-footer">About Me</div>
+
+      <form>
+        <div class="form-group">
+          <label for="email1">Email Address</label>
+          <input type="email" class="form-control" id="myAccountEmail" placeholder="Email">
+
+        </div>
+        <div class="form-group">
+          <label for="emailPassword1">Password</label>
+          <input type="password" class="form-control" id="emailPassword1" placeholder="password">
+        </div>
+      </form>
+
   </div>
 
+ </div>
 </div>
