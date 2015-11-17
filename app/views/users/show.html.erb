@@ -30,11 +30,18 @@
 
       <form>
         <div class="form-group">
+          <h3> <%=@user.email%> </h3>
+          <%= @email.inspect %>
+          Email: <%= @user.email %>
+          Username: <%= @user.username %>
+          Email: <%= @email.useremail %>
           <label for="email1">Email Address</label>
           <input type="email" class="form-control" id="myAccountEmail" placeholder="Email">
 
         </div>
         <div class="form-group">
+          Password: <%= @current_user.password %>
+          password: <%= @user.password %>
           <label for="emailPassword1">Password</label>
           <input type="password" class="form-control" id="emailPassword1" placeholder="password">
         </div>
