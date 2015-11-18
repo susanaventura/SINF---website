@@ -15,7 +15,7 @@
       </div>
       <div class="panel-body">My Orders</div>
       <!--Table-->
-      <table class="table">
+      <table class="table table-bolder">
         <div class="rows">
           <div class="col-xs-6 col-md-3"></div>
           <th>OrderID</th>
@@ -31,10 +31,10 @@
       <form>
         <div class="form-group">
           <h3> <%=@user.email%> </h3>
-          Email: <%= @current_user.email %>
+          
           Email: <%= @user.email %>
           Username: <%= @user.username %>
-          
+
           <label for="email1">Email Address</label>
           <input type="email" class="form-control" id="myAccountEmail" placeholder="Email">
 
