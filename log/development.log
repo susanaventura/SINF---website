@@ -4865,3 +4865,2594 @@ Started GET "/assets/search.png" for ::1 at 2015-11-20 12:53:32 +0000
 
 
 Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 12:53:32 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:00:46 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 2728ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `Description' for #<Hash:0x8765be0>):
+    1: <p> <%=@info.Description%> </p>
+  app/views/static_pages/product.html.erb:1:in `_app_views_static_pages_product_html_erb___122440562_70984392'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.2ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (105.3ms)
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:01:25 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1313ms (Views: 522.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:01:26 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:01:27 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:01:27 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:01:27 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:01:27 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:01:27 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:01:41 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 1377ms (Views: 424.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:01:43 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:02:00 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (8.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2095ms (Views: 1389.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:02:02 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:02:09 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (7.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1373ms (Views: 431.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:02:11 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:03:06 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (17.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1258ms (Views: 417.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:03:07 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:03:07 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:03:07 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:03:07 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:03:07 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:03:07 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:03:07 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:03:07 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:03:08 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:03:43 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (33.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1432ms (Views: 481.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:03:45 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:04:22 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 838ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2015-11-20 13:04:23 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_categories_list.html.erb (2.9ms)
+  Rendered layouts/_slider.html.erb (0.0ms)
+  Rendered layouts/_products_list.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (61.5ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 984ms (Views: 605.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/pri_images.slide-1-image.png/" for ::1 at 2015-11-20 13:04:24 +0000
+
+ActionController::RoutingError (No route matches [GET] "/pri_images.slide-1-image.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.14.0) lib/puma/server.rb:541:in `handle_request'
+  puma (2.14.0) lib/puma/server.rb:388:in `process_client'
+  puma (2.14.0) lib/puma/server.rb:270:in `block in run'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (93.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.7ms)
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-20 13:04:24 +0000
+
+
+Started GET "/images/drop_arrow.png" for ::1 at 2015-11-20 13:04:24 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/drop_arrow.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.14.0) lib/puma/server.rb:541:in `handle_request'
+  puma (2.14.0) lib/puma/server.rb:388:in `process_client'
+  puma (2.14.0) lib/puma/server.rb:270:in `block in run'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (63.5ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (172.9ms)
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:04:25 +0000
+
+
+Started GET "/pri_images.slide-1-image.png" for ::1 at 2015-11-20 13:04:25 +0000
+
+ActionController::RoutingError (No route matches [GET] "/pri_images.slide-1-image.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.14.0) lib/puma/server.rb:541:in `handle_request'
+  puma (2.14.0) lib/puma/server.rb:388:in `process_client'
+  puma (2.14.0) lib/puma/server.rb:270:in `block in run'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (69.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (101.6ms)
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:04:25 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:04:25 +0000
+
+
+Started GET "/images/list-img.png" for ::1 at 2015-11-20 13:04:25 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/list-img.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.14.0) lib/puma/server.rb:541:in `handle_request'
+  puma (2.14.0) lib/puma/server.rb:388:in `process_client'
+  puma (2.14.0) lib/puma/server.rb:270:in `block in run'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (96.7ms)
+
+
+Started GET "/home" for ::1 at 2015-11-20 13:04:38 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_categories_list.html.erb (2.0ms)
+  Rendered layouts/_slider.html.erb (0.0ms)
+  Rendered layouts/_products_list.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (77.1ms)
+  Rendered layouts/_header.html.erb (7.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1197ms (Views: 708.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:04:39 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:04:39 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:04:39 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:04:39 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:04:39 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:04:39 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:04:39 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:04:40 +0000
+
+
+Started GET "/pri_images.slide-1-image.png/" for ::1 at 2015-11-20 13:04:40 +0000
+
+ActionController::RoutingError (No route matches [GET] "/pri_images.slide-1-image.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.14.0) lib/puma/server.rb:541:in `handle_request'
+  puma (2.14.0) lib/puma/server.rb:388:in `process_client'
+  puma (2.14.0) lib/puma/server.rb:270:in `block in run'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (68.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (96.7ms)
+
+
+Started GET "/pri_images.slide-1-image.png" for ::1 at 2015-11-20 13:04:40 +0000
+
+ActionController::RoutingError (No route matches [GET] "/pri_images.slide-1-image.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.14.0) lib/puma/server.rb:541:in `handle_request'
+  puma (2.14.0) lib/puma/server.rb:388:in `process_client'
+  puma (2.14.0) lib/puma/server.rb:270:in `block in run'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (66.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (95.7ms)
+
+
+Started GET "/images/list-img.png" for ::1 at 2015-11-20 13:04:40 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/list-img.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.14.0) lib/puma/server.rb:541:in `handle_request'
+  puma (2.14.0) lib/puma/server.rb:388:in `process_client'
+  puma (2.14.0) lib/puma/server.rb:270:in `block in run'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (67.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (52.7ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (109.4ms)
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:04:41 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:04:41 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:04:41 +0000
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-20 13:04:41 +0000
+
+
+Started GET "/images/drop_arrow.png" for ::1 at 2015-11-20 13:04:41 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/drop_arrow.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.14.0) lib/puma/server.rb:541:in `handle_request'
+  puma (2.14.0) lib/puma/server.rb:388:in `process_client'
+  puma (2.14.0) lib/puma/server.rb:270:in `block in run'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (171.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (99.6ms)
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:04:44 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (6.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1534ms (Views: 504.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:04:46 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:04:46 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:05:06 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 1079ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `Description' for #<Hash:0x571ad90>):
+    1: <p> <%=@info.Description%> </p>
+  app/views/static_pages/product.html.erb:1:in `_app_views_static_pages_product_html_erb___122440562_45618132'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.2ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (60.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (112.1ms)
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:05:20 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 1085ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `description' for #<Hash:0x9474cc0>):
+    1: <p> <%=@info.description%> </p>
+  app/views/static_pages/product.html.erb:1:in `_app_views_static_pages_product_html_erb___122440562_77806764'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.6ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (79.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (64.5ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (127.9ms)
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:05:53 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (7.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2132ms (Views: 490.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:05:55 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:05:55 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:05:55 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:05:55 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:05:55 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:05:55 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:05:55 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:05:55 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:05:55 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:05:55 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:05:55 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:05:56 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:06:10 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (7.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1566ms (Views: 433.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:06:11 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:06:12 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:06:12 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:06:12 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:06:12 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:06:12 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:06:12 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:06:12 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:06:12 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:06:12 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:06:12 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:10:58 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (6.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1474ms (Views: 453.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:10:59 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:11:00 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:11:00 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:11:00 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:11:00 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:11:00 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:11:00 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:11:00 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:11:00 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:11:00 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:11:00 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:11:00 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:11:20 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (6.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1490ms (Views: 464.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:11:22 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:12:21 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (7.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1401ms (Views: 467.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:12:23 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:13:11 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (6.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1213ms (Views: 406.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:13:12 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:13:13 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:13:13 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:13:13 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:13:13 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:13:13 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:13:13 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:13:13 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:13:13 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:13:13 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:16:45 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1534ms (Views: 463.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:16:46 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:16:47 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:17:03 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (60.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1426ms (Views: 557.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:17:04 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:17:04 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:17:04 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:17:04 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:17:04 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:17:04 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:17:05 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:17:44 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (9.8ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 1537ms (Views: 498.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:17:45 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:17:45 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:17:45 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:17:45 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:17:46 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:17:52 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1351ms (Views: 443.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:17:54 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:20:25 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 949ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:6: syntax error, unexpected '*', expecting '='
+...output_buffer.append=(*sadface*);@output_buffer.to_s
+...                               ^
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:9: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/static_pages/product.html.erb:6: syntax error, unexpected '*', expecting '='
+  app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/static_pages/product.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (96.7ms)
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:20:39 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 1092ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:6: syntax error, unexpected '*', expecting '='
+...output_buffer.append=(*sadface*);@output_buffer.safe_append=...
+...                               ^
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;end;@output_buffer.to_s
+            ^
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:10: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/static_pages/product.html.erb:6: syntax error, unexpected '*', expecting '='
+  app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+  app/views/static_pages/product.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/static_pages/product.html.erb:10: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (64.5ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (119.1ms)
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:21:12 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 2010ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_end
+end;@output_buffer.to_s
+   ^
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:8: syntax error, unexpected keyword_ensure, expecting keyword_end
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:10: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_end
+  app/views/static_pages/product.html.erb:8: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/static_pages/product.html.erb:10: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.2ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (111.7ms)
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:22:18 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 1074ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_end
+ end 
+    ^
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:9: syntax error, unexpected keyword_ensure, expecting keyword_end
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:11: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_end
+  app/views/static_pages/product.html.erb:9: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/static_pages/product.html.erb:11: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (107.4ms)
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:22:36 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 1284ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_end
+ end 
+    ^
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:9: syntax error, unexpected keyword_ensure, expecting keyword_end
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:11: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_end
+  app/views/static_pages/product.html.erb:9: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/static_pages/product.html.erb:11: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.7ms)
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:22:49 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 915ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_end
+ end ;@output_buffer.to_s
+    ^
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:8: syntax error, unexpected keyword_ensure, expecting keyword_end
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:10: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_end
+  app/views/static_pages/product.html.erb:8: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/static_pages/product.html.erb:10: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.2ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.5ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.6ms)
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:23:14 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 1676ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_end
+ end ;@output_buffer.safe_append=' -->'.freeze;@output_buffer.to_s
+    ^
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:8: syntax error, unexpected keyword_ensure, expecting keyword_end
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:10: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/static_pages/product.html.erb:7: syntax error, unexpected keyword_end
+  app/views/static_pages/product.html.erb:8: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/static_pages/product.html.erb:10: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (23.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (166.0ms)
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:23:46 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 997ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:7: syntax error, unexpected tSTRING_BEG, expecting keyword_do_LAMBDA or tLAMBEG
+ #end ;@output_buffer.safe_append=' -->'.freeze;@output_buffer.to_s
+                                        ^
+C:/Users/user/Desktop/SINF_web/app/views/static_pages/product.html.erb:7: unterminated string meets end of file):
+  app/views/static_pages/product.html.erb:7: syntax error, unexpected tSTRING_BEG, expecting keyword_do_LAMBDA or tLAMBEG
+  app/views/static_pages/product.html.erb:7: unterminated string meets end of file
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.8ms)
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:23:55 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (7.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1714ms (Views: 435.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:23:57 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:23:58 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:24:25 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (7.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1833ms (Views: 655.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:24:27 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:24:27 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:24:27 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:24:27 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:24:27 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:24:27 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:24:27 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:24:27 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:24:27 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:24:27 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:24:28 +0000
+
+
+Started GET "/product?id=A0001" for ::1 at 2015-11-20 13:24:40 +0000
+Processing by StaticPagesController#product as HTML
+  Parameters: {"id"=>"A0001"}
+  Rendered static_pages/product.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (6.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1605ms (Views: 612.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ee5ddbc204c7267290775af9bb01fedf1d65b55fdd66c692d6f7374a3c0d7222.css?body=1" for ::1 at 2015-11-20 13:24:41 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-20 13:24:41 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-20 13:24:41 +0000
+
+
+Started GET "/assets/turbolinks.self-39e1dc81cb7f0cfb4a8d670a68e75666ee360e5e1668bfad001130a4126f9125.js?body=1" for ::1 at 2015-11-20 13:24:41 +0000
+
+
+Started GET "/assets/js/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-20 13:24:41 +0000
+
+
+Started GET "/assets/custom.self-bc6c8ec7f9aa89c2d6a6aab25b378e0892aec25ea0b8e565c46d35aafd708301.js?body=1" for ::1 at 2015-11-20 13:24:41 +0000
+
+
+Started GET "/assets/easing.self-6c26533254dc21fba188b69b81300ecd94c1bef2dda72b9dbb750111973ed31b.js?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/easyResponsiveTabs.self-4d426afbd176a7f697fbd18d6139448152654c0f26b67ccc5ac295d31efbad4c.js?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/jquery.accordion.self-8ffc2ab69867cc367a8822aa680c1bc1b6b2e7edda813c761dc55876b59e048e.js?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/jquery.easing.self-3a639c31befee4797093271cbabfb4b4aa62a0a55adc290f6f8f0a743d954c44.js?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/move-top.self-39ab974ecc4f741018b60d6bdf41a6b165e2379722ac93ad2e680edd1965df33.js?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/script.self-d73a8ed719f1583c2f31b9e2702ea93a659fc8fafc1e7f975e8f8af48ab97b8f.js?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/slides.min.jquery.self-d0803505546a614b19dc1adf240ad225581cbf0d376cc39e6da56509b539096f.js?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/startstop-slider.self-f40c6cf6ba331d33939f979c215c05c570744c2d4e46cd7dac41ef5551b30438.js?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/style.self-60ac86d62211b11560571b20aa502136ded1a8bbd555a4d1b0342075dc3c19b1.css?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/css/bootstrap.self-c68c406b70db1115478355392ee8e55e46903052ef2acc9b83a09aa57ea2c0d1.css?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/application.self-373a8c46449c8945d5f568717121199071937453b95a71fc07004e7d01dc1f4e.css?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/custom.self-dbb76ec3980d56523edefc0e795fe42cbcb1f909bb9e64050e9c6b1881b24851.css?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/slider.self-212cc25bdcad8b7db6a6930abdac76ed3b2c86421fb091de172d4b9054792204.css?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/application.self-32a82a918ac23f0ead93436a9875d7b754e110225815f7f014daace493f8ecdc.js?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/website_logo-3ea470454bfc0d715c1f30be392937ab00f380922265751b453ba0bc2d348547.png" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/search.png" for ::1 at 2015-11-20 13:24:42 +0000
+
+
+Started GET "/assets/fonts/Amble-Regular-webfont.ttf" for ::1 at 2015-11-20 13:24:42 +0000
