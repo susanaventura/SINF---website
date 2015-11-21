@@ -7,8 +7,11 @@ class ApplicationController < ActionController::Base
   include PrimaveraIntegrationHelper
 
   
-  before_filter :set_categories
-  def set_categories
+  before_filter :get_primavera_global_info
+  def get_primavera_global_info
     @categories = get_categories
+    @stores = get_stores
   end
+
+
 end

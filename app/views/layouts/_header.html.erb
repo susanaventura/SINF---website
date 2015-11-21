@@ -73,16 +73,16 @@
         <a data-toggle="dropdown" class="dropdown-toggle" href="#">Categories</a>
         <ul class="dropdown-menu">
 		  <% @categories.each do |category| %>
-			<li><a href="#"><%=category['name']%></a></li>
+			<li><%= link_to  category['name'], products_path(codCategory: category['code']) %></li>
 		  <%end%>
         </ul>
       </li>
       <li class="dropdown">
         <a data-toggle="dropdown" class="dropdown-toggle" href="#">Stores</a>
         <ul class="dropdown-menu">
-          <li><a href="#">Store 1</a></li>
-          <li><a href="#">Store 2</a></li>
-          <li><a href="#">Store 3</a></li>
+          <% @stores.each do |store| %>
+          <li><%= link_to  store['name'], products_path(codStore: store['code']) %></a></li>
+          <%end%>
         </ul>
       </li>
       <li><a href="#">Points store</a></li>
