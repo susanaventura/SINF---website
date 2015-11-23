@@ -68,20 +68,21 @@
 <div class="header_bottom">
   <div class="menu">
     <ul>
-      <li><a href=<%=root_path%>>Home</a></li>
+      <li><%= link_to 'Home', root_path %></li>
+      <li><%= link_to 'Products', products_path %></li>
       <li class="dropdown">
-        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Categories</a>
+        <a data-toggle="dropdown" class="dropdown-toggle" href=<%=products_path%> >Categories</a>
         <ul class="dropdown-menu">
-		  <% @categories.each do |category| %>
-			<li><%= link_to  category['name'], products_path(codCategory: category['code']) %></li>
-		  <%end%>
+          <% categories.each do |category| %>
+            <li><%= link_to  category['name'], products_path(codCategory: category['code']) %></li>
+          <%end%>
         </ul>
       </li>
       <li class="dropdown">
-        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Stores</a>
+        <a data-toggle="dropdown" class="dropdown-toggle" href=<%=products_path%> >Stores</a>
         <ul class="dropdown-menu">
-          <% @stores.each do |store| %>
-          <li><%= link_to  store['name'], products_path(codStore: store['code']) %></a></li>
+          <% stores.each do |store| %>
+            <li><%= link_to  store['name'], products_path(codStore: store['id']) %></a></li>
           <%end%>
         </ul>
       </li>
