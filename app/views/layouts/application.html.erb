@@ -11,7 +11,7 @@
 
 <div class="container">
 
-  <%= render 'layouts/header' %>
+  <%= render partial: 'layouts/header', locals: {categories: @categories, stores: @stores} %>
 
   <% flash.each do |message_type, message|%>
       <div class="alert alert-<%=message_type%>"> <%=message%> </div>

@@ -5,6 +5,11 @@ module PrimaveraIntegrationHelper
     parse_res(send_get('categories'), [])
   end
 
+  def get_stores
+    parse_res(send_get('stores'), [])
+  end
+
+
   def get_client(id)
     parse_res(send_get("clients/#{id}"), nil)
   end
@@ -21,6 +26,7 @@ module PrimaveraIntegrationHelper
   def post_client(user)
     parse_res(send_post('clients', user_to_json(user)), nil, '201')
   end
+
 
 
   private
