@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-  resources :users
+  resources :users, except:[:edit]
   resources :images, path: 'pri_images'
 
   get 'register' => 'users#new'
@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get 'checkout/overview' => 'orders#checkout_overview'
   get 'checkout/preview' => 'orders#checkout_preview'
 
+  get 'users/editaccount/:id' => 'users#edit_account', as: 'edit_account'
+  get 'users/editaddress/:id' => 'users#edit_address', as: 'edit_address'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

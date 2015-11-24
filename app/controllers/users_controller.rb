@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :correct_user,	 only: [:edit, :update]
+  before_action :correct_user, only: [:edit, :update]
 
   def index
     @users = User.paginate(page: params[:page])
@@ -20,14 +20,14 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if !(exists_in_primavera = get_client(@user.username.upcase)) && @user.valid?
-        if post_client(@user)
-          @user.save
-          flash[:info] = "Welcome #{@user.name}!"
-          redirect_to root_url
-        else
-          @user.errors[:base] << 'Error creating user! Please try again later'
-          render 'new'
-        end
+      if post_client(@user)
+        @user.save
+        flash[:info] = "Welcome #{@user.name}!"
+        redirect_to root_url
+      else
+        @user.errors[:base] << 'Error creating user! Please try again later'
+        render 'new'
+      end
     else
       if exists_in_primavera
         @user.errors[:username] << 'already exists!'
@@ -36,17 +36,29 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit
+  def edit_address
     @user = User.find(params[:id])
+    if @user
+      @user.set_info_from_primavera(get_client(@user.username))
+    end
+  end
+
+  def edit_account
+    @user = User.find(params[:id])
+    if @user
+      @user.set_info_from_primavera(get_client(@user.username))
+    end
   end
 
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
+
+    if @user.update_attributes(user_params(params[:user][:source]))
+
       flash[:success] = 'Profile updated'
       redirect_to @user
     else
-      render 'edit'
+      render params[:user][:page_source]
     end
   end
 
@@ -58,9 +70,10 @@ class UsersController < ApplicationController
 
   private
 
-  def user_params
-    params.require(:user).permit(User.attributes)
+  def user_params(index = :all)
+    params.require(:user).permit(User.attributes(index))
   end
+
 
   def logged_in_user
     unless logged_in?
