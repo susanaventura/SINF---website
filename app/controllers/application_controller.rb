@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   include SessionsHelper
   include PrimaveraIntegrationHelper
-
+  include ImagesHelper
   
   before_filter :get_primavera_global_info
   def get_primavera_global_info
