@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get 'home' => 'static_pages#home'
   get 'products' => 'static_pages#products'
+  get 'product' => 'static_pages#product'
 
   get 'checkout/overview', to: 'orders#checkout_overview', as: 'checkout_overview'
   get 'checkout/preview', to: 'orders#checkout_preview', as: 'checkout_preview'

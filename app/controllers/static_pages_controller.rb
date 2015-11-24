@@ -14,5 +14,13 @@ class StaticPagesController < ApplicationController
       redirect_to home_path
     end
   end
+  
+  def product
+	prod_id = params[:id]
+	@info = get_product(prod_id)
+	if !@info
+		redirect_to home_path
+	end
+  end
 
 end
