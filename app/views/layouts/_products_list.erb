@@ -30,7 +30,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="add-cart">
-                  <h4><a href="#">Add to Cart</a></h4>
+                  <h4><%= link_to 'Add to Cart', {controller: 'shopping_carts', action: 'add_item', item: p}, :method => :post %></h4>
                 </div>
               </div>
             </div>

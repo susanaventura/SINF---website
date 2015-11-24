@@ -9,6 +9,7 @@ class StaticPagesController < ApplicationController
       @products = WillPaginate::Collection.create(params[:page], pri_products['pageSize'], pri_products['numResults']) do |pager|
         pager.replace(pri_products['products'])
       end
+      #render :json => @products
     else
       redirect_to home_path
     end

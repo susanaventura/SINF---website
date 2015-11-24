@@ -10,20 +10,28 @@
   </div>
 </div>
 
-
-<div class="row">
-  <div class="col-md-12 col-md-offset-1">
-    <p>Until now you selected the following items:</p>
+<% if cart_empty? %>
+  <div class="row">
+    <div class="col-md-12 col-md-offset-1">
+      <p>Your cart is empty.</p>
+      <p>To add items to your cart, click on the "Add to Cart" button next to an item.</p>
+      <p></p>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-10 col-md-offset-1">
-    <%= render partial: 'layouts/order_items_list', locals:{overview: true}%>
+<%else%>
+  <div class="row">
+    <div class="col-md-12 col-md-offset-1">
+      <p>Until now you selected the following items:</p>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-10 col-md-offset-1">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <%= render partial: 'layouts/order_items_list', locals:{overview: true, cart: @cart}%>
+    </div>
   </div>
-</div>
-
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+    </div>
+  </div>
+<%end%>
 </div>
