@@ -24,7 +24,7 @@ class StaticPagesController < ApplicationController
 
   def stores_index
     @store_products = {}
-    @stores.each do |store|
+    @stores.each do |_,store|
       @store_products[store['id']] = get_products(codStore: store['id'], pageLength: 3)['products']
     end
   end
