@@ -9,11 +9,22 @@
 
     <div class="row">
       <div class="col-md-12">
-        <% if params[:filterPoints] %><h1 class="title-page">Points store</h1><%end%>
-        <% if params[:filterOnSale] %><h1 class="title-page">On sale</h1><%end%>
-        <div class="back-links">
-          <p>Categories >><%if params[:codCategory]%><%=@categories%><%end%></p>
-        </div>
+        <% if params[:filterPoints] %><h1 class="title-page">Points store</h1>
+        <% end %>
+        <% if params[:filterOnSale] %><h1 class="title-page">On sale</h1>
+        <% end %>
+        <% if params[:codCategory] %>
+            <div class="back-links">
+              <p>Categories >>
+               <%= @categories[params[:codCategory]]['name'] %></p>
+            </div>
+        <% end %>
+        <% if params[:searchString] %>
+            <div class="back-links">
+              <p>Search >>
+                <%= params[:searchString] %></p>
+            </div>
+        <%end%>
       </div>
     </div>
 
