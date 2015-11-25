@@ -1,91 +1,96 @@
-<div class="panel panel-default order_list_products box-shadow--16dp">
+<% is_overview = defined?(overview) && overview %>
 
-  <table class="table">
+<%= form_tag cart_update_path, :method => :post do %>
+    <div class="panel panel-default order_list_products box-shadow--16dp">
+      <table class="table">
 
-    <tr class="table-row-highlighted table-cells-border">
-      <th>Product</th>
-      <th class="text-center">Price</th>
-      <th class="text-center">Quantity</th>
-      <th class="text-right">Total product price</th>
-    </tr>
+        <tr class="table-row-highlighted table-cells-border">
+          <th>Product</th>
+          <th class="text-center">Price</th>
+          <th class="text-center">Quantity</th>
+          <th class="text-right">Total product price</th>
+        </tr>
 
-    <!-- PRODUCT -->
-    <% cart['items'].each do |_, product| %>
-      <tr>
-        <td>
-          <div class="media">
-            <div class="media-left">
-              <a href="#">
-                <%= image_tag get_image_for_product(product), class: 'media-object', width: '50%' %>
-              </a>
-            </div>
-            <div class="media-body" style="width:50%">
-              <a href="#"><h4 class="media-heading order-product_name"><%= product['Description']%></h4></a>
-            </div>
+        <!-- PRODUCT -->
+        <% cart['items'].each do |_, product| %>
+            <tr>
+              <td>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <%= image_tag get_image_for_product(product), class: 'media-object', width: '50%' %>
+                    </a>
+                  </div>
+                  <div class="media-body" style="width:50%">
+                    <a href="#"><h4 class="media-heading order-product_name"><%= product['Description'] %></h4></a>
+                  </div>
+                </div>
+              </td>
+              <td class="text-center"><%= "#{product['Price']}€" %></td>
+              <td class="text-center">
+
+                <input name=<%= "cart[#{product['CodProduct']}]" %> type="number" value=<%= product['quantity'] %> min="0" max="100" step="1" class="custom-form-control">
+                <%= link_to({controller: 'shopping_carts', action: 'remove_item', item: product['CodProduct']}, :method => :post) do %>
+                    <span class="glyphicon glyphicon-remove"></span>
+                <% end %>
+
+              </td>
+              <td class="text-right"><%= "#{product['quantity'] * product['Price'].to_f}€" %></td>
+            </tr>
+        <% end %>
+        <!-- /PRODUCT -->
+
+        <tr class="table-row-highlighted table-cells-border">
+          <th colspan="3" style="border-top: 1px solid #B81D22">Total discount</th>
+          <th class="text-right" style="border-top: 1px solid #B81D22">P1</th>
+        </tr>
+
+        <% if !is_overview %>
+            <tr class="table-row-highlighted table-cells-border">
+        <% else %>
+            <tr class="table-row-highlighted">
+        <% end %>
+        <th colspan="3">Subtotal</th>
+        <th class="text-right">P1</th>
+        </tr>
+
+        <% if !is_overview %>
+            <tr class="table-row-highlighted table-cells-border">
+              <th colspan="3">
+                Shipping
+                <br>
+
+                <p style="padding-left:5px">
+                  <small>Method: CTT</small>
+                </p>
+              </th>
+              <th class="text-right">0.00€</th>
+            </tr>
+
+            <tr class="table-row-highlighted">
+              <th colspan="3" class="text-right"><h2>Final Billing Value</h2></th>
+              <th class="text-right"><h2>P1</h2></th>
+            </tr>
+        <% end %>
+      </table>
+    </div>
+
+    <% if is_overview %>
+        <div class="form-group">
+          <div class="col-md-6 text-left">
+            <button class="btn btn-primary btn-light-red">Back to store</button>
           </div>
-        </td>
-        <td class="text-center"><%= "#{product['Price']}€"%></td>
-        <td class="text-center">
-
-          <input type="number" value=<%=product['quantity']%> min="0" max="100" step="1" class="custom-form-control">
-          <%= link_to({controller: 'shopping_carts', action: 'remove_item', item: product['CodProduct']}, :method => :post) do %>
-            <span class="glyphicon glyphicon-remove"></span>
-          <%end%>
-
-        </td>
-        <td class="text-right"><%= "#{product['quantity'] * Float(product['Price'])}€"%></td>
-      </tr>
-    <% end %>
-    <!-- /PRODUCT -->
-
-    <tr class="table-row-highlighted table-cells-border">
-      <th colspan="3" style="border-top: 1px solid #B81D22">Total discount</th>
-      <th class="text-right" style="border-top: 1px solid #B81D22">P1</th>
-    </tr>
-
-    <% if !(defined?(overview) && overview) %>
-        <tr class="table-row-highlighted table-cells-border">
+          <div class="col-md-6 text-right">
+            <%= submit_tag 'Update Cart', class: 'btn btn-primary btn-red' %>
+            <%= link_to 'Clear Cart', cart_clear_path, :method => :post, class: 'btn btn-primary btn-red' %>
+            <%= link_to 'Checkout', checkout_preview_path, class: 'btn btn-primary btn-red' %>
+          </div>
+        </div>
     <% else %>
-        <tr class="table-row-highlighted">
+        <div class="form-group">
+          <div class="col-md-12 text-right">
+            <button class="btn btn-primary btn-red">Order</button>
+          </div>
+        </div>
     <% end %>
-    <th colspan="3">Subtotal</th>
-    <th class="text-right">P1</th>
-    </tr>
-
-    <% if !(defined?(overview) && overview) %>
-        <tr class="table-row-highlighted table-cells-border">
-          <th colspan="3">
-            Shipping
-            <br>
-
-            <p style="padding-left:5px">
-              <small>Method: CTT</small>
-            </p>
-          </th>
-          <th class="text-right">0.00€</th>
-        </tr>
-
-        <tr class="table-row-highlighted">
-          <th colspan="3" class="text-right"><h2>Final Billing Value</h2></th>
-          <th class="text-right"><h2>P1</h2></th>
-        </tr>
-    <% end %>
-  </table>
-</div>
-
-<% if defined?(overview) && overview %>
-    <div class="form-group">
-      <div class="col-md-6 text-left">
-        <button class="btn btn-primary btn-light-red">Back to store</button>
-      </div>
-      <div class="col-md-6 text-right">
-        <button class="btn btn-primary btn-red">Checkout</button>
-      </div>
-    </div>
-<% else %>
-    <div class="form-group">
-      <div class="col-md-12 text-right">
-        <button class="btn btn-primary btn-red">Order</button>
-      </div>
-    </div>
 <% end %>

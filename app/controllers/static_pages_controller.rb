@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @products_on_sale = get_products(filterOnSale: true, pageLength: 3)['products']
+    @products_on_sale = OnlineStoreWeb::Application::STATIC_ASSETS[:products_on_sale]['products']
   end
 
   def products
@@ -10,18 +10,16 @@ class StaticPagesController < ApplicationController
       @products = WillPaginate::Collection.create(params[:page], pri_products['pageSize'], pri_products['numResults']) do |pager|
         pager.replace(pri_products['products'])
       end
-      #render :json => @products
     else
       redirect_to home_path
     end
   end
   
   def product
-	prod_id = params[:id]
-	@info = get_product(prod_id)
-	if !@info
-		redirect_to home_path
-	end
+    @product = get_product(params[:id])
+    if !@product
+      redirect_to home_path
+    end
   end
 
   def stores_index

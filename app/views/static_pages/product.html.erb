@@ -2,10 +2,10 @@
 			<div id="horizontalTab">
 			
 				<div class="product_info">
-					<img src="assets/photo_not_available.jpg" title="We have no photos yet! =[">
-					<p><span style="font-size: 150%;font-weight: bold;"> <%=@info['Description']%> </span></p>
-					<p> <span style="font-weight: bold">Price:</span> <%='%.2f' % @info['Price']%> <%=@info['Currency']%> </p>
-					<p> Current discount on this product is <span style="font-weight: bold"><%='%.2f' % @info['Discount']%>%</span> </p>
+					<%= image_tag get_image_for_product(@product) %>
+					<p><span style="font-size: 150%;font-weight: bold;"> <%= @product['Description']%> </span></p>
+					<p> <span style="font-weight: bold">Price:</span> <%='%.2f' % @product['Price']%> <%= @product['Currency']%> </p>
+					<p> Current discount on this product is <span style="font-weight: bold"><%='%.2f' % @product['Discount']%>%</span> </p>
 				</div>
 			
 				<div class="resp-tabs-container">

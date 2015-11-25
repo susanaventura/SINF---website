@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if !(exists_in_primavera = get_client(@user.username.upcase)) && @user.valid?
       if post_client(@user)
         @user.save
-        flash[:info] = "Welcome #{@user.name}!"
+        flash[:product] = "Welcome #{@user.name}!"
         redirect_to root_url
       else
         @user.errors[:base] << 'Error creating user! Please try again later'

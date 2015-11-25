@@ -1,7 +1,7 @@
 <div class="categories">
   <ul>
     <h3>Stores</h3>
-    <% stores.each do |store| %>
+    <% stores.each do |_,store| %>
         <li><%= link_to  store['name'], products_path(codStore: store['id']) %></li>
     <% end %>
   </ul>
