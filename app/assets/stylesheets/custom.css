@@ -207,3 +207,9 @@ ul#inline-footer-list li{
 .product_info img {
 	float: left;
 }
+
+
+p.discount{
+    margin:0;
+    color: #CD1F25
+}

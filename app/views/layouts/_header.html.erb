@@ -92,11 +92,12 @@
         <a data-toggle="dropdown" class="dropdown-toggle" href="<%=stores_path%>">Stores</a>
         <ul class="dropdown-menu">
           <% stores.each do |_,store| %>
-              <li><%= link_to store['name'], products_path(codStore: store['id']) %></a></li>
+              <li><%= link_to store['name'], products_path(codStore: store['id']) %></li>
           <% end %>
         </ul>
       </li>
-      <li><a href="#">Points store</a></li>
+      <li><%= link_to 'Points store', points_store_path(filterPoints: true)%></li>
+      <li><%= link_to 'On sale', products_path(filterOnSale: true)%></li>
       <div class="clear"></div>
     </ul>
   </div>

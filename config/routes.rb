@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get 'home' => 'static_pages#home'
   get 'products' => 'static_pages#products'
+  get 'points_store' => 'static_pages#points_store'
   get 'stores' => 'static_pages#stores_index'
   get 'product/:id' => 'static_pages#product', as: 'product'
 
