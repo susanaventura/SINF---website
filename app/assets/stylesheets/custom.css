@@ -203,3 +203,7 @@ p,td,tr {
 ul#inline-footer-list li{
     display:inline !important;
 }
+
+.product_info img {
+	float: left;
+}

@@ -10,30 +10,32 @@
     </tr>
 
     <!-- PRODUCT -->
-    <tr>
-      <td>
-        <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <img class="media-object" src="http://placehold.it/140x100" alt="product image">
-            </a>
+    <% cart['items'].each do |_, product| %>
+      <tr>
+        <td>
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <%= image_tag get_image_for_product(product), class: 'media-object', width: '50%' %>
+              </a>
+            </div>
+            <div class="media-body" style="width:50%">
+              <a href="#"><h4 class="media-heading order-product_name"><%= product['Description']%></h4></a>
+            </div>
           </div>
-          <div class="media-body" style="width:50%">
-            <a href="#"><h4 class="media-heading order-product_name">product name</h4></a>
-            quantity or size per package
-          </div>
-        </div>
-      </td>
-      <td class="text-center">P1</td>
-      <td class="text-center">
+        </td>
+        <td class="text-center"><%= "#{product['Price']}€"%></td>
+        <td class="text-center">
 
-        <input type="number" value="0" min="0" max="100" step="1" class="custom-form-control">
+          <input type="number" value=<%=product['quantity']%> min="0" max="100" step="1" class="custom-form-control">
+          <%= link_to({controller: 'shopping_carts', action: 'remove_item', item: product['CodProduct']}, :method => :post) do %>
+            <span class="glyphicon glyphicon-remove"></span>
+          <%end%>
 
-        <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
-
-      </td>
-      <td class="text-right">P1</td>
-    </tr>
+        </td>
+        <td class="text-right"><%= "#{product['quantity'] * Float(product['Price'])}€"%></td>
+      </tr>
+    <% end %>
     <!-- /PRODUCT -->
 
     <tr class="table-row-highlighted table-cells-border">
