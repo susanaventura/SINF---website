@@ -96,10 +96,10 @@
     </ul>
   </div>
   <div class="search_box">
-    <%= form_tag products_path, method:'GET' do %>
+    <form action="<%=products_path%>" method="get">
         <%= text_field_tag :searchString, '', placeholder: 'Search'%>
-        <%= submit_tag '' %>
-    <% end %>
+        <input type="submit" value/>
+    </form>
 
   </div>
   <div class="clear"></div>
