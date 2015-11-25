@@ -27,6 +27,10 @@ module PrimaveraIntegrationHelper
     parse_res(send_post('clients', user_to_json(user)), nil, '201')
   end
 
+  def put_client(user)
+    send_put('clients', user_to_json(user)).code == '200'
+  end
+
 
 
   private
@@ -55,6 +59,18 @@ module PrimaveraIntegrationHelper
       req.body = data
 
       puts 'Sending POST request to ' + url.to_s
+
+      send_request(url, req)
+    end
+
+    # Sends a PUT request to a primavera resource
+    def send_put(resource, data)
+
+      url = URI.parse(primavera_path(resource))
+      req = Net::HTTP::Put.new(url.to_s, initheader = {'Content-Type' => 'application/json'})
+      req.body = data
+
+      puts 'Sending Put request to ' + url.to_s
 
       send_request(url, req)
     end

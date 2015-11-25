@@ -1,52 +1,8 @@
 <div class="row row-products">
-  <%
-     i = 0
-     while i < products.size %>
-          <% p = products[i] %>
+  <% products.each do |p| %>
 
-          <!-- PRODUCT -->
-          <div class="col-md-3 col-sx-12 product">
-            <div class="row">
-              <div class="col-md-12">
-                <a href="#"><%= image_tag get_image_for_product(p), class: 'img-responsive' %></a>
-              </div>
-            </div>
-            <div class="row product-desc">
-              <div class="col-md-12">
-                <h5><%= p['Description'] %></h5>
-              </div>
-            </div>
+      <%= render partial: 'layouts/product', locals: {p: p} %>
 
-            <div class="row">
-              <div class="col-md-12">
-                <div class="price-details">
-                  <div class="price-number">
-                    <p><span class="rupees"><%= p['Price'].round(2) %>€</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="add-cart">
-                  <h4><a href="#">Add to Cart</a></h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="clear"></div>
-
-          </div>
-
-          <!-- /PRODUCT -->
-          <%
-             i += 1
-             if i >= products.size
-               break
-             end
-          %>
-
-      <% end %>
+  <% end %>
 </div>
 

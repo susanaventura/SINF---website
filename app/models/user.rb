@@ -24,9 +24,16 @@ class User < ActiveRecord::Base
   has_secure_password
   validates(:password, presence: true, length: {minimum: 6}, allow_nil: true)
 
-  def User.attributes
-    [:username, :email, :password, :password_confirmation] + [:name, :taxpayer_num, :address, :local, :postal_address]
+
+  def User.attributes(index = :all)
+    attr = {
+        :all => [:username, :email, :password, :password_confirmation] + [:name, :taxpayer_num, :address, :local, :postal_address],
+        'edit_address' => [:address, :local, :postal_address],
+        'edit_account' => [:name, :taxpayer_num, :password, :password_confirmation]
+    }
+    attr[index] || attr[:all]
   end
+
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost

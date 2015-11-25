@@ -189,6 +189,21 @@ p,td,tr {
     border-color: #ddd;
 }
 
+.header-my-account{
+    border: 1px solid #c7bfbf;
+    border-radius: 3px;
+    padding-left: 10px;
+    margin-bottom:10px;
+}
+
+.margin-bottom-10{
+    margin-bottom:10px;
+}
+
+ul#inline-footer-list li{
+    display:inline !important;
+}
+
 .product_info img {
 	float: left;
 }

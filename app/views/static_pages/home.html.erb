@@ -5,6 +5,7 @@
 
     <div class="col-md-3">
       <%= render partial: 'layouts/categories_list', locals: {categories: @categories} %>
+      <%= render partial: 'layouts/stores_list', locals: {stores: @stores} %>
     </div>
     <div class="col-md-9">
       <%= render 'layouts/slider' %>
@@ -16,12 +17,12 @@
               <h3>Products on Sale</h3>
             </div>
             <div class="see">
-              <p><a href="#">See all Products</a></p>
+              <p><%= link_to 'See all Products', products_path(filterOnSale: true) %></p>
             </div>
             <div class="clear"></div>
           </div>
 
-          <%= render partial:'layouts/products_list', locals: {products: []} %>
+          <%= render partial:'layouts/products_list', locals: {products: @products_on_sale} %>
 
         </div>
       </div>

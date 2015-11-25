@@ -4,11 +4,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   include SessionsHelper
+  include ShoppingCartsHelper
   include PrimaveraIntegrationHelper
   include ImagesHelper
+
   
-  before_filter :get_primavera_global_info
-  def get_primavera_global_info
+  before_filter :set_global_sets
+  def set_global_sets
+    @cart = get_cart
     @categories = get_categories
     @stores = get_stores
   end

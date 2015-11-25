@@ -11,7 +11,7 @@
 
 <div class="container">
 
-  <%= render partial: 'layouts/header', locals: {categories: @categories, stores: @stores} %>
+  <%= render partial: 'layouts/header', locals: {categories: @categories, stores: @stores, cart: @cart} %>
 
   <% flash.each do |message_type, message|%>
       <div class="alert alert-<%=message_type%>"> <%=message%> </div>
@@ -20,6 +20,7 @@
   <%= yield %>
 
   <%= render 'layouts/footer' %>
+
 
 </div>
 

@@ -1,12 +1,163 @@
 <% provide(:title, 'My account') %>
 
 <div class="row">
-  <div class="col-md-12">
-      <h3> <%=@user.name%> </h3>
-      <h3> Pagina Temporaria </h3>
+  <div class="col-md-12 col-md-offset-2">
+    <h1 class="title-page">My Account</h1>
+  </div>
+</div>
 
-      <%= @user.inspect %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <hr>
+  </div>
+</div>
+
+<!-- ROW my orders title -->
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+    <div class="header-my-account">
+      <h4>My orders</h4>
+    </div>
+  </div>
+</div> <!-- /ROW my orders title-->
+
+<!-- ROW my orders-->
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+
+    <div class="panel panel-default">
+      <!--Table-->
+      <table class="table table-bolder">
+        <tr class="table-row-highlighted">
+          <th>OrderID</th>
+          <th>Date</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Options</th>
+        </tr>
+        <tr>
+          <td>Order12345</td>
+          <td>12 Dec 2012</td>
+          <td>0.00$</td>
+          <td>Delivered</td>
+          <td>
+            <a href="#">Download bill</a>
+            <br>
+            <a href="#">Details >></a>
+          </td>
+        </tr>
+        <tr>
+          <td>Order12345</td>
+          <td>12 Dec 2012</td>
+          <td>0.00$</td>
+          <td>Delivered</td>
+          <td>
+            <a href="#">Download bill</a>
+            <br>
+            <a href="#">Details >></a>
+          </td>
+        </tr>
+
+      </table>
+    </div>
 
   </div>
+</div><!-- /ROW my orders-->
 
-</div>
+<!-- ROW points title -->
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+    <div class="header-my-account">
+      <h4>Points program</h4>
+    </div>
+  </div>
+</div> <!-- /ROW points title -->
+
+<!-- ROW abou me-->
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+    <div class="panel panel-default">
+
+      <div class="row" style="margin-top:10px">
+        <div class="col-md-11" style="margin-left:10px">
+          <p><strong>Current points:</strong> 200 points</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 text-right" style="margin-right:10px">
+          <button class="btn btn-primary btn-red" style="margin-bottom:10px">Go to points store!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /ROW about me-->
+
+
+
+<!-- ROW about me title -->
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+    <div class="header-my-account">
+      <h4>About me</h4>
+    </div>
+  </div>
+</div> <!-- /ROW about me title -->
+
+<!-- ROW abou me-->
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+    <div class="panel panel-default">
+
+      <div class="row" style="margin-top:10px">
+        <div class="col-md-11" style="margin-left:10px">
+          <p><strong>E-mail:</strong> <%= @user.email %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11" style="margin-left:10px">
+          <p><strong>Password:</strong> ********</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11" style="margin-left:10px">
+          <p><strong>Taxpayer number:</strong> <%= @user.taxpayer_num%></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11" style="margin-left:10px">
+          <p><strong>Currency:</strong> <%= @user.currency%></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-11 text-right" style="margin-right:10px">
+          <%= link_to 'Edit preferences >>', edit_account_path(current_user) %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr style="margin-left:10px; margin-right:10px">
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <div class="col-md-3">
+          <p style="margin-left:10px"><strong>Delivery/Billing Address:</strong></p>
+        </div>
+        <div class="col-md-9">
+          <p><%=@user.name%></p>
+          <p><%= @user.address %></p>
+          <p><%= @user.postal_address%></p>
+          <p><%= @user.local%></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-11 text-right margin-bottom-10">
+          <%= link_to 'Edit preferences >>', edit_address_path(current_user) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /ROW about me-->

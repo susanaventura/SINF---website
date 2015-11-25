@@ -9,3 +9,5 @@
 Image.delete_all
 Image.create!({ product: 'A0001', path: 'products/pentium_processor.png' })
 Image.create!({ product: 'A0002', path: 'products/pentium_processor.png' })
+ 
+ #Add entries here
