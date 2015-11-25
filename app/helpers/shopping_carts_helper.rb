@@ -31,13 +31,26 @@ module ShoppingCartsHelper
     cart_update_totals
   end
 
+  def cart_set(items)
+    get_cart
+    items.each do |item, quantity|
+      if (quantity.to_i == 0)
+        session[:cart]['items'].delete(item)
+      elsif (session[:cart]['items'][item])
+        session[:cart]['items'][item]['quantity'] = quantity.to_i
+      end
+    end
+
+    cart_update_totals
+  end
+
   def cart_update_totals
     total_cost = 0
     total_discount = 0
     total_items = 0
 
     get_cart['items'].each do |_, item|
-      total_cost += Float(item['Price']) * item['quantity']
+      total_cost += item['Price'].to_f * item['quantity']
       total_items += item['quantity']
     end
 

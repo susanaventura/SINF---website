@@ -2,11 +2,19 @@ module PrimaveraIntegrationHelper
   require 'net/http'
 
   def get_categories
-    parse_res(send_get('categories'), [])
+    categories = {}
+    parse_res(send_get('categories'), []).each do |category|
+      categories[category['code']] = category
+    end
+    return categories
   end
 
   def get_stores
-    parse_res(send_get('stores'), [])
+    stores = {}
+    parse_res(send_get('stores'), []).each do |store|
+      stores[store['id']] = store
+    end
+    return stores
   end
 
 
@@ -19,7 +27,7 @@ module PrimaveraIntegrationHelper
   end
 
   def get_products(params)
-    parse_res(send_get("products?#{params.to_query}"), nil)
+    parse_res(send_get("products?#{params.to_query}"), {'products' => []})
   end
 
 
@@ -31,7 +39,17 @@ module PrimaveraIntegrationHelper
     send_put('clients', user_to_json(user)).code == '200'
   end
 
+  def get_static_assets
+    last_update = OnlineStoreWeb::Application::STATIC_ASSETS[:last_update]
+    if (last_update && last_update < 24.hours.ago)
+      OnlineStoreWeb::Application::STATIC_ASSETS.clear
+    end
+    OnlineStoreWeb::Application::STATIC_ASSETS[:last_update] ||= Time.zone.now
 
+    OnlineStoreWeb::Application::STATIC_ASSETS[:categories] ||= get_categories
+    OnlineStoreWeb::Application::STATIC_ASSETS[:stores] ||= get_stores
+    OnlineStoreWeb::Application::STATIC_ASSETS[:products_on_sale] ||= get_products(filterOnSale: true, pageLength: 3)
+  end
 
   private
 

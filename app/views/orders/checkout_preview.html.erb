@@ -18,7 +18,7 @@
 </div>
 <div class="row">
   <div class="col-md-10 col-md-offset-1">
-    <%= render 'layouts/order_items_list' %>
+    <%= render partial: 'layouts/order_items_list', locals: {cart: @cart} %>
   </div>
 </div>
 <div class="row">
