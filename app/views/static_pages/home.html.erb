@@ -8,25 +8,41 @@
       <%= render partial: 'layouts/stores_list', locals: {stores: @stores} %>
     </div>
     <div class="col-md-9">
-      <%= render 'layouts/slider' %>
+      <%= render partial: 'layouts/slider', locals: {products: @products_on_sale} %>
 
       <div class="main">
+
         <div class="content">
           <div class="content_top">
             <div class="heading">
-              <h3>Products on Sale</h3>
+              <h3>Last sold products</h3>
             </div>
             <div class="see">
-              <p><%= link_to 'See all Products', products_path(filterOnSale: true) %></p>
+              <p><%= link_to 'See all Products', products_path(filterLastSold: true) %></p>
             </div>
             <div class="clear"></div>
           </div>
 
-          <%= render partial:'layouts/products_list', locals: {products: @products_on_sale} %>
+          <%= render partial: 'layouts/products_list', locals: {products: @products_last_sold} %>
+
 
         </div>
-      </div>
 
+
+        <div class="content">
+          <div class="content_top">
+            <div class="heading">
+              <h3>New products</h3>
+            </div>
+            <div class="see">
+              <p><%= link_to 'See all Products', products_path(sortDate: true) %></p>
+            </div>
+            <div class="clear"></div>
+          </div>
+
+          <%= render partial: 'layouts/products_list', locals: {products: @products_new} %>
+        </div>
+      </div>
 
     </div>
   </div>
