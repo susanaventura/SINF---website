@@ -12,6 +12,7 @@ class OrdersController < ApplicationController
     end
   end
 
+  
   private
 
     def logged_in_user

@@ -13,6 +13,12 @@
         <% end %>
         <% if params[:filterOnSale] %><h1 class="title-page">On sale</h1>
         <% end %>
+        <% if params[:codStore] %>
+            <div class="back-links">
+              <p>Stores >>
+                <%= @stores[params[:codStore]]['name']%></p>
+            </div>
+        <% end %>
         <% if params[:codCategory] %>
             <div class="back-links">
               <p>Categories >>
