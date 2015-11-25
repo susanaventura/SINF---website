@@ -35,22 +35,13 @@
           <th>Status</th>
           <th>Options</th>
         </tr>
+
+        <% @orders.each do |o| %>
         <tr>
-          <td>Order12345</td>
-          <td>12 Dec 2012</td>
-          <td>0.00$</td>
-          <td>Delivered</td>
-          <td>
-            <a href="#">Download bill</a>
-            <br>
-            <a href="#">Details >></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Order12345</td>
-          <td>12 Dec 2012</td>
-          <td>0.00$</td>
-          <td>Delivered</td>
+          <td><%=o['CodOrder']%></td>
+          <td><%=o['Date'].to_time.to_formatted_s(:long)%></td>
+          <td><%=o['Total'].round(2)%>€</td>
+          <td><%=o['Status']%></td>
           <td>
             <a href="#">Download bill</a>
             <br>
@@ -58,6 +49,7 @@
           </td>
         </tr>
 
+        <% end %>
       </table>
     </div>
 

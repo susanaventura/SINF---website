@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'points_store' => 'static_pages#points_store'
   get 'stores' => 'static_pages#stores_index'
   get 'product/:id' => 'static_pages#product', as: 'product'
+  get 'order/:id' => 'orders#show'
 
   get 'checkout/overview', to: 'orders#checkout_overview', as: 'checkout_overview'
   get 'checkout/preview', to: 'orders#checkout_preview', as: 'checkout_preview'

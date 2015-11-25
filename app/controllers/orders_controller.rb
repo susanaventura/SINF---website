@@ -1,6 +1,11 @@
 class OrdersController < ApplicationController
   before_action :logged_in_user, only: [:checkout_preview]
 
+  def show
+    @order = get_order( params.to_param)
+    params.to_param
+
+  end
 
   def checkout_overview
 
@@ -12,7 +17,7 @@ class OrdersController < ApplicationController
     end
   end
 
-  
+
   private
 
     def logged_in_user
