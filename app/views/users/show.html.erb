@@ -43,9 +43,9 @@
           <td><%=o['Total'].round(2)%>€</td>
           <td><%=o['Status']%></td>
           <td>
-            <a href="#">Download bill</a>
-            <br>
-            <a href="#">Details >></a>
+            <!--<a href="#">Download bill</a>
+            <br>-->
+            <%= link_to 'Details >>', order_path(o['CodOrder'])%>
           </td>
         </tr>
 
