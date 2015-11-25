@@ -16,15 +16,15 @@ Rails.application.routes.draw do
   get 'checkout/overview', to: 'orders#checkout_overview', as: 'checkout_overview'
   get 'checkout/preview', to: 'orders#checkout_preview', as: 'checkout_preview'
 
-<<<<<<< HEAD
+
   get 'users/editaccount/:id' => 'users#edit_account', as: 'edit_account'
   get 'users/editaddress/:id' => 'users#edit_address', as: 'edit_address'
-=======
+
   post 'cart/add', to: 'shopping_carts#add_item', as: 'cart_add'
   post 'cart/remove', to: 'shopping_carts#remove_item', as: 'cart_remove'
   post 'cart/update', to: 'shopping_carts#update', as: 'cart_update'
   get 'cart/clear', to: 'shopping_carts#clear', as: 'cart_clear'
->>>>>>> be4dbfe0cb81dcb3aacca9e7b734017726a672b3
+
 
   get 'cart/test', to: 'shopping_carts#test', as: 'cart_test'
 

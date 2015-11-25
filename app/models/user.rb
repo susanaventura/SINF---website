@@ -27,13 +27,12 @@ class User < ActiveRecord::Base
 
   def User.attributes(index = :all)
     attr = {
-        all: [:username, :email, :password, :password_confirmation] + [:name, :taxpayer_num, :address, :local, :postal_address],
-        'edit_address' => [:address, :local, :postal_address]
+        :all => [:username, :email, :password, :password_confirmation] + [:name, :taxpayer_num, :address, :local, :postal_address],
+        'edit_address' => [:address, :local, :postal_address],
+        'edit_account' => [:name, :taxpayer_num, :password, :password_confirmation]
     }
     attr[index] || attr[:all]
   end
-
-
 
 
   def User.digest(string)
