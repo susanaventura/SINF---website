@@ -1,0 +1,36 @@
+<!-- PRODUCT -->
+<div class="col-md-3 col-sx-12 product">
+  <div class="row">
+    <div class="col-md-12">
+      <a href="#"><%= image_tag get_image_for_product(p), class: 'img-responsive' %></a>
+    </div>
+  </div>
+  <div class="row product-desc">
+    <div class="col-md-12">
+      <h5><%= p['Description'] %></h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="price-details">
+        <div class="price-number">
+          <p><span class="rupees"><%= p['Price'].round(2) %>€</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="add-cart">
+        <h4><%= link_to 'Add to Cart', {controller: 'shopping_carts', action: 'add_item', item: p}, :method => :post %></h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+
+</div>
+
+<!-- /PRODUCT -->

@@ -1,16 +1,16 @@
 <div class="headertop_desc">
   <div class="account_desc">
     <% if logged_in? %>
-      <h3>  </h3>
-    <%end%>
+        <h3></h3>
+    <% end %>
     <ul>
       <% if logged_in? %>
-          <li><%=current_user.username%></li>
+          <li><%= current_user.username %></li>
           <li><%= link_to 'My Account', user_path(current_user) %></li>
           <li><%= link_to 'Delivery', '#' %></li>
           <li><%= link_to 'Checkout', '#' %></li>
           <li><%= link_to 'Log Out', logout_path, method: 'delete' %></li>
-      <%else%>
+      <% else %>
           <li><%= link_to 'Login', login_path %></li>
           <li><%= link_to 'Register', register_path %></li>
       <% end %>
@@ -21,14 +21,20 @@
 
 <div class="header_top">
   <div class="logo">
-    <a href=<%=root_path%>><%=image_tag('website_logo.png')%></a>
+    <a href=<%= root_path %>><%= image_tag('website_logo.png') %></a>
   </div>
   <div class="cart">
     <p>Welcome to our Online Store! <span>Cart:</span>
 
-    <div id="dd" class="wrapper-dropdown-2"> 0 item(s) - €0.00
+    <div id="dd" class="wrapper-dropdown-2">  <%= "#{cart['total_items']} item(s) - #{cart['total_cost']}€" %>
       <ul class="dropdown">
-        <li>you have no items in your Shopping cart</li>
+        <% if cart_empty? %>
+            <li>You have no items in your Shopping cart</li>
+        <% else %>
+            <% cart['items'].each do |_, item| %>
+                <li><%= "#{item['quantity']}x #{item['Description']} - #{item['quantity'] * Float(item['Price'])}€" %></li>
+            <% end %>
+        <% end %>
       </ul>
     </div>
     </p>
@@ -68,21 +74,21 @@
 <div class="header_bottom">
   <div class="menu">
     <ul>
-      <li><a href=<%=root_path%>>Home</a></li>
+      <li><%= link_to 'Home', root_path %></li>
       <li class="dropdown">
-        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Categories</a>
+        <a data-toggle="dropdown" class="dropdown-toggle" href=<%= products_path %>>Categories</a>
         <ul class="dropdown-menu">
-		  <% @categories.each do |category| %>
-			<li><a href="#"><%=category['name']%></a></li>
-		  <%end%>
+          <% categories.each do |category| %>
+              <li><%= link_to category['name'], products_path(codCategory: category['code']) %></li>
+          <% end %>
         </ul>
       </li>
       <li class="dropdown">
-        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Stores</a>
+        <a data-toggle="dropdown" class="dropdown-toggle" href=<%= products_path %>>Stores</a>
         <ul class="dropdown-menu">
-          <li><a href="#">Store 1</a></li>
-          <li><a href="#">Store 2</a></li>
-          <li><a href="#">Store 3</a></li>
+          <% stores.each do |store| %>
+              <li><%= link_to store['name'], products_path(codStore: store['id']) %></a></li>
+          <% end %>
         </ul>
       </li>
       <li><a href="#">Points store</a></li>
@@ -90,9 +96,11 @@
     </ul>
   </div>
   <div class="search_box">
-    <form>
-      <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+    <form action="<%=products_path%>" method="get">
+        <%= text_field_tag :searchString, '', placeholder: 'Search'%>
+        <input type="submit" value/>
     </form>
+
   </div>
   <div class="clear"></div>
 </div>

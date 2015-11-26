@@ -1427,9 +1427,11 @@ h2 {
     .col_1_of_3{
         margin:0;
     }
+    /*
     .panel p{
         font-size:0.8em;
     }
+    */
     .col{
         margin: 1% 0 1% 0%;
     }
