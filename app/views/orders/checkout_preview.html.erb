@@ -16,14 +16,161 @@
     <p>Until now you selected the following items:</p>
   </div>
 </div>
+
 <div class="row">
   <div class="col-md-10 col-md-offset-1">
-    <%= render partial: 'layouts/order_items_list', locals: {cart: @cart} %>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-10 col-md-offset-1">
+    <div class="panel panel-default order_list_products box-shadow--16dp">
+      <table class="table">
+
+        <tr class="table-row-highlighted table-cells-border">
+          <th>Product</th>
+          <th class="text-center">Price</th>
+          <th class="text-center">Quantity</th>
+          <th class="text-right">Total product price</th>
+        </tr>
+
+        <!-- PRODUCT -->
+        <%
+           subtotal = 0
+           total_iec = 0
+           total_iva = 0
+           total_discount = 0
+        %>
+
+        <% @cart['items'].each do |_,product| %>
+            <%
+               quantity = product['quantity']
+               price_unit = product['Price']
+               discount_perc = product['Discount']
+               discount_unit = price_unit * discount_perc/100.0
+               iva_perc = product['IVAValue']
+               iva_unit = (iva_perc/100.0)*(price_unit-discount_unit)
+               valor_iec = product['IECValue']
+
+               product_total_liquid = quantity * (price_unit-discount_unit)
+               product_total_discount = quantity * discount_unit
+               product_total_iva = quantity * iva_unit
+
+               subtotal += product_total_liquid
+               total_iva += product_total_iva
+               total_discount += product_total_discount
+               total_iec += quantity * valor_iec
+            %>
+            <tr>
+              <td>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <%= image_tag get_image_for_product(product), class: 'media-object', width: '50%' %>
+                    </a>
+                  </div>
+                  <div class="media-body" style="width:50%">
+                    <a href="#"><h4 class="media-heading order-product_name"><%= product['Description'] %></h4></a>
+                  </div>
+                </div>
+              </td>
+              <td class="text-center">
+                <%= "Unit price: #{price_unit}€" %>
+                <% if valor_iec > 0.0 %>
+                    <br>--
+                    <br>IEC:
+                    <%= valor_iec %>
+                <% end %>
+                <% if discount_unit > 0 %>
+                    <br>--
+                    <br>Discount:
+                    <%= "-#{discount_perc}% = #{price_unit-discount_unit}€" %>
+                <% end %>
+                <br>--
+                <br>IVA:
+                <%= "#{iva_perc}% = #{iva_unit.round(2)}€" %>
+                <br>--
+                <br><strong>Unit final price:
+                <%= "#{(price_unit-discount_unit+iva_unit).round(2)}€" %>
+              </strong>
+              </td>
+
+              <td class="text-center">
+                <%= quantity %>
+              </td>
+
+
+              <td class="text-center">
+                <%= "Products price: #{price_unit*quantity}€" %>
+                <% if valor_iec> 0.0 %>
+                    <br>--
+                    <br>IEC:
+                    <%= valor_iec %>
+                <% end %>
+                <% if discount_unit > 0 %>
+                    <br>--
+                    <br>Discount:
+                    <%= "-#{discount_perc}% = #{product_total_discount.round(2)}€" %>
+                <% end %>
+                <br>--
+                <br>IVA:
+                <%= "#{iva_perc}% = #{product_total_iva.round(2)}€" %>
+                <br>--
+                <br><strong>Final price:
+                <%= "#{(product_total_liquid + product_total_iva).round(2)}€" %>
+              </strong>
+              </td>
+            </tr>
+        <% end %>
+        <!-- /PRODUCT -->
+
+
+        <tr class="table-row-highlighted">
+          <th colspan="3">Subtotal</th>
+          <th class="text-right"><%= "#{subtotal}€" %></th>
+        </tr>
+
+        <tr class="table-row-highlighted">
+          <th colspan="3">Total IEC</th>
+          <th class="text-right"><%= "#{total_iec}€" %></th>
+        </tr>
+
+        <tr class="table-row-highlighted">
+          <th colspan="3">Total IVA</th>
+          <th class="text-right"><%= "#{total_iva}€" %></th>
+        </tr>
+
+        <tr class="table-row-highlighted table-cells-border">
+          <th colspan="3">
+            Shipping
+            <br>
+
+            <p style="padding-left:5px">
+              <small>Method: CTT</small>
+            </p>
+          </th>
+          <th class="text-right">0.0€</th>
+        </tr>
+
+
+        <tr class="table-row-highlighted table-cells-border">
+          <th colspan="3" style="border-top: 1px solid #B81D22">Total discount</th>
+          <th class="text-right" style="border-top: 1px solid #B81D22"><%= total_discount.round(2) %>€</th>
+        </tr>
+
+        <tr class="table-row-highlighted">
+          <th colspan="3" class="text-right"><h2><strong>Final Billing Value</strong></h2></th>
+          <th class="text-right"><h2><strong><%= (subtotal + total_iec + total_iva).round(2) %>€</strong></h2></th>
+        </tr>
+
+      </table>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-12 text-right">
+        <%= link_to 'Order', order_create_path, :method => :post, class: 'btn btn-primary btn-red' %>
+      </div>
+    </div>
+
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+  </div>
 </div>

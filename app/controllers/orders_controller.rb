@@ -2,13 +2,13 @@ class OrdersController < ApplicationController
   before_action :logged_in_user, only: [:checkout_preview, :user]
 
   def show
-    @order = get_order( params.to_param)
+    @order = get_order(params.to_param)
     params.to_param
 
+    render json: @order
   end
 
   def checkout_overview
-
   end
 
   def checkout_preview
@@ -22,6 +22,8 @@ class OrdersController < ApplicationController
     cart = get_cart
 
     if user && cart && post_order(user,cart)
+      session.delete :cart
+      get_cart
       redirect_to user_path(current_user)
     else
       flash[:danger] = 'Error submiting order. Please try again later'

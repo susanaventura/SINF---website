@@ -68,7 +68,6 @@
               </td>
 
 
-
               <td class="text-center">
                 <%= "Products price: #{product['UnitPrice']*product['Quantity']}€" %>
                 <% if product['ValorIEC'] > 0.0 %>
@@ -96,17 +95,17 @@
 
         <tr class="table-row-highlighted">
           <th colspan="3">Subtotal</th>
-          <th class="text-right"><%= "#{@order['SubTotal']}€"%></th>
+          <th class="text-right"><%= "#{@order['SubTotal']}€" %></th>
         </tr>
 
         <tr class="table-row-highlighted">
           <th colspan="3">Total IEC</th>
-          <th class="text-right"><%= "#{@order['TotalIEC']}€"%></th>
+          <th class="text-right"><%= "#{@order['TotalIEC']}€" %></th>
         </tr>
 
         <tr class="table-row-highlighted">
           <th colspan="3">Total IVA</th>
-          <th class="text-right"><%= "#{@order['TotalIva']}€"%></th>
+          <th class="text-right"><%= "#{@order['TotalIva']}€" %></th>
         </tr>
 
         <tr class="table-row-highlighted table-cells-border">
@@ -118,27 +117,26 @@
               <small>Method: CTT</small>
             </p>
           </th>
-          <th class="text-right"><%= "#{@order['TotalShippingCosts']}€"%></th>
+          <th class="text-right"><%= "#{@order['TotalShippingCosts']}€" %></th>
         </tr>
 
 
         <tr class="table-row-highlighted table-cells-border">
           <th colspan="3" style="border-top: 1px solid #B81D22">Total discount</th>
-          <th class="text-right" style="border-top: 1px solid #B81D22"><%= @order['TotalDiscount'].round(2)%>€</th>
+          <th class="text-right" style="border-top: 1px solid #B81D22"><%= @order['TotalDiscount'].round(2) %>€</th>
         </tr>
 
         <tr class="table-row-highlighted">
           <th colspan="3" class="text-right"><h2><strong>Final Billing Value</strong></h2></th>
-          <th class="text-right"><h2><strong><%= @order['Total'].round(2)%>€</strong></h2></th>
+          <th class="text-right"><h2><strong><%= @order['Total'].round(2) %>€</strong></h2></th>
         </tr>
 
       </table>
     </div>
   </div>
 </div>
+
 <div class="row">
   <div class="col-md-10 col-md-offset-1">
   </div>
-</div>
-
 </div>
