@@ -17,5 +17,6 @@
 // require easing
 //= require js/bootstrap.js
 //= require custom
+//= require slides.min.jquery
 // require startstop-slider
 //= require_tree .
