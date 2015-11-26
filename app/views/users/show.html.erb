@@ -35,29 +35,21 @@
           <th>Status</th>
           <th>Options</th>
         </tr>
+
+        <% @orders.each do |o| %>
         <tr>
-          <td>Order12345</td>
-          <td>12 Dec 2012</td>
-          <td>0.00$</td>
-          <td>Delivered</td>
+          <td><%=o['CodOrder']%></td>
+          <td><%=o['Date'].to_time.to_formatted_s(:long)%></td>
+          <td><%=o['Total'].round(2)%>€</td>
+          <td><%=o['Status']%></td>
           <td>
-            <a href="#">Download bill</a>
-            <br>
-            <a href="#">Details >></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Order12345</td>
-          <td>12 Dec 2012</td>
-          <td>0.00$</td>
-          <td>Delivered</td>
-          <td>
-            <a href="#">Download bill</a>
-            <br>
-            <a href="#">Details >></a>
+            <!--<a href="#">Download bill</a>
+            <br>-->
+            <%= link_to 'Details >>', order_path(o['CodOrder'])%>
           </td>
         </tr>
 
+        <% end %>
       </table>
     </div>
 
@@ -85,7 +77,7 @@
       </div>
       <div class="row">
         <div class="col-md-11 text-right" style="margin-right:10px">
-          <button class="btn btn-primary btn-red" style="margin-bottom:10px">Go to points store!</button>
+          <%= link_to 'Go to points store!', points_store_path(filterPoints: true), class:'btn btn-primary btn-red', style:"margin-bottom:10px"%>
         </div>
       </div>
     </div>

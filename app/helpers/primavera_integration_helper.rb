@@ -55,6 +55,17 @@ module PrimaveraIntegrationHelper
     OnlineStoreWeb::Application::STATIC_ASSETS[:products_on_sale] ||= get_products(filterOnSale: true, pageLength: 3)
   end
 
+
+  def get_user_orders(user)
+    #parse_res(send_get("orders?codClient=#{user}"), {'orders' => []})
+    parse_res(send_get("orders?codClient=SILVA"), {'orders' => []})
+  end
+
+  def get_order(id)
+    parse_res(send_get("orders?#{id}"), nil)
+  end
+
+
   private
 
     # Returns the path to the Primavera API
