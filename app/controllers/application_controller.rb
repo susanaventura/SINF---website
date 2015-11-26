@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   include ShoppingCartsHelper
   include PrimaveraIntegrationHelper
   include ImagesHelper
+  include UsersHelper
 
   
   before_filter :init_assets

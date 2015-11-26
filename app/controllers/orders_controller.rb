@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :logged_in_user, only: [:checkout_preview]
+  before_action :logged_in_user, only: [:checkout_preview, :user]
 
 
   def checkout_overview
@@ -9,6 +9,18 @@ class OrdersController < ApplicationController
   def checkout_preview
     if cart_empty?
       redirect_to checkout_overview_path
+    end
+  end
+
+  def create
+    user = find_user_with_pri_info(current_user.id)
+    cart = get_cart
+
+    if user && cart && post_order(user,cart)
+      redirect_to user_path(current_user)
+    else
+      flash[:danger] = 'Error submiting order. Please try again later'
+      redirect :back
     end
   end
 

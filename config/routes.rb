@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   get 'checkout/overview', to: 'orders#checkout_overview', as: 'checkout_overview'
   get 'checkout/preview', to: 'orders#checkout_preview', as: 'checkout_preview'
+  post 'order/create', to: 'orders#create', as: 'order_create'
 
   get 'users/editaccount/:id' => 'users#edit_account', as: 'edit_account'
   get 'users/editaddress/:id' => 'users#edit_address', as: 'edit_address'
