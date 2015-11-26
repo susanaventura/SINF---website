@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @user = find_user_with_pri_info(params[:id])
+    @orders = get_user_orders(@user.username)
   end
 
   def new
@@ -19,7 +20,7 @@ class UsersController < ApplicationController
     if !(exists_in_primavera = get_client(@user.username.upcase)) && @user.valid?
       if post_client(@user)
         @user.save
-        flash[:info] = "Welcome #{@user.name}!"
+        flash[:product] = "Welcome #{@user.name}!"
         redirect_to root_url
       else
         @user.errors[:base] << 'Error creating user! Please try again later'
@@ -91,12 +92,5 @@ class UsersController < ApplicationController
     redirect_to(root_url) unless current_user?(@user)
   end
 
-  def find_user_with_pri_info(id)
-    if (user = User.find(id)) && (pri_client = get_client(user.username))
-      user.set_info_from_primavera(pri_client)
-      user
-    else
-      nil
-    end
-  end
+
 end

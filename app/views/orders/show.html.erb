@@ -1,6 +1,9 @@
 <div class="row">
-  <div class="col-md-12 col-md-offset-1">
-    <h1 class="title-page">Your cart</h1>
+  <div class="col-md-10 col-md-offset-1">
+    <div class="back-links">
+      <p>My account >> Order >>
+        <%= @order['CodOrder'] %></p>
+    </div>
   </div>
 </div>
 
@@ -12,18 +15,71 @@
 
 
 <div class="row">
-  <div class="col-md-12 col-md-offset-1">
-    <p>Until now you selected the following items:</p>
+  <div class="col-md-10 col-md-offset-1">
+    <div class="panel panel-default order_list_products box-shadow--16dp">
+      <table class="table">
+
+        <tr class="table-row-highlighted table-cells-border">
+          <th>Product</th>
+          <th class="text-center">Price</th>
+          <th class="text-center">Quantity</th>
+          <th class="text-right">Total product price</th>
+        </tr>
+
+        <!-- PRODUCT -->
+        <% @order['Items'].each do |product| %>
+            <tr>
+              <td>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <%= image_tag get_image_for_product(product), class: 'media-object', width: '50%' %>
+                    </a>
+                  </div>
+                  <div class="media-body" style="width:50%">
+                    <a href="#"><h4 class="media-heading order-product_name"><%= product['Description'] %></h4></a>
+                  </div>
+                </div>
+              </td>
+              <td class="text-center">
+                <%= "#{product['UnitPrice']}€" %>
+                <% if product['ValorIEC'] > 0.0 %>
+                    <br>--
+                    <br>IEC:
+                    <%= product['ValorIEC'] %>
+                <% end %>
+                <% if product['Discount'] > 0 %>
+                    <br>--
+                    <br>Discount:
+                    <%= product['Discount'] %>
+                <% end %>
+              </td>
+              <td class="text-center">
+                <%= product['Quantity'].round() %>
+              </td>
+              <td class="text-right">
+                <%= "#{product['TotalPrediscount']}€" %>
+                <% if product['TotalIEC'] > 0.0 %>
+                    <br>--
+                    <br>IEC:
+                    <%= "#{product['TotalIEC']}€" %>
+                <% end %>
+                <br>--
+                <br>Total:
+                <%= "#{product['Total']}€" %>
+              </td>
+            </tr>
+        <% end %>
+        <!-- /PRODUCT -->
+
+
+      </table>
+    </div>
   </div>
 </div>
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <%= render 'layouts/order_items_list' %>
-    </div>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
   </div>
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-    </div>
-  </div>
+</div>
 
 </div>

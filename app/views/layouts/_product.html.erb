@@ -1,4 +1,5 @@
 <!-- PRODUCT -->
+
 <div class="col-md-3 col-sx-12 product">
   <div class="row">
     <div class="col-md-12">
@@ -7,7 +8,7 @@
   </div>
   <div class="row product-desc">
     <div class="col-md-12">
-      <h5><%= p['Description'] %></h5>
+      <h5><%= link_to p['Description'], product_path(p['CodProduct']) %></h5>
     </div>
   </div>
 
@@ -15,11 +16,29 @@
     <div class="col-md-12">
       <div class="price-details">
         <div class="price-number">
-          <p><span class="rupees"><%= p['Price'].round(2) %>€</span></p>
+          <% if params[:filterPoints] %> <p><span class="rupees"><%= p['Points'].round() %> points</span></p>
+          <% else %>
+              <% if p['Discount'] == 0.0 %>
+                  <p><span class="rupees"><%= p['Price'].round(2) %>€</span></p>
+              <% else %>
+                  <p style="margin-bottom:0; padding-bottom:0;">
+                    <span class="rupees"><%= (p['Price']-(p['Discount']/100*p['Price'])).round(2) %>€</span>
+                    <del><%= p['Price'].round(2) %>€</del>
+                  </p>
+              <% end %>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
+
+  <% if p['Discount'] > 0.0 && !params[:filterPoints]%>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="discount" align="right">(<%= p['Discount'].round() %>% off)</p>
+        </div>
+      </div>
+  <% end %>
 
   <div class="row">
     <div class="col-md-12">

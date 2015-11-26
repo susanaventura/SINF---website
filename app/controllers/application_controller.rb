@@ -7,13 +7,16 @@ class ApplicationController < ActionController::Base
   include ShoppingCartsHelper
   include PrimaveraIntegrationHelper
   include ImagesHelper
+  include UsersHelper
 
   
-  before_filter :set_global_sets
-  def set_global_sets
+  before_filter :init_assets
+  def init_assets
     @cart = get_cart
-    @categories = get_categories
-    @stores = get_stores
+
+    get_static_assets
+    @categories = OnlineStoreWeb::Application::STATIC_ASSETS[:categories]
+    @stores = OnlineStoreWeb::Application::STATIC_ASSETS[:stores]
   end
 
 

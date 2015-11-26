@@ -2,11 +2,19 @@ module PrimaveraIntegrationHelper
   require 'net/http'
 
   def get_categories
-    parse_res(send_get('categories'), [])
+    categories = {}
+    parse_res(send_get('categories'), []).each do |category|
+      categories[category['code']] = category
+    end
+    return categories
   end
 
   def get_stores
-    parse_res(send_get('stores'), [])
+    stores = {}
+    parse_res(send_get('stores'), []).each do |store|
+      stores[store['id']] = store
+    end
+    return stores
   end
 
 
@@ -19,7 +27,7 @@ module PrimaveraIntegrationHelper
   end
 
   def get_products(params)
-    parse_res(send_get("products?#{params.to_query}"), nil)
+    parse_res(send_get("products?#{params.to_query}"), {'products' => []})
   end
 
 
@@ -28,9 +36,34 @@ module PrimaveraIntegrationHelper
   end
 
   def put_client(user)
-    send_put('clients', user_to_json(user)).code == '200'
+    check_res(send_put('clients', user_to_json(user)), '200')
   end
 
+  def post_order(user, cart)
+    check_res(send_post('orders', order_to_json(user,cart)), '201')
+  end
+
+  def get_static_assets
+    last_update = OnlineStoreWeb::Application::STATIC_ASSETS[:last_update]
+    if (last_update && last_update < 24.hours.ago)
+      OnlineStoreWeb::Application::STATIC_ASSETS.clear
+    end
+    OnlineStoreWeb::Application::STATIC_ASSETS[:last_update] ||= Time.zone.now
+
+    OnlineStoreWeb::Application::STATIC_ASSETS[:categories] ||= get_categories
+    OnlineStoreWeb::Application::STATIC_ASSETS[:stores] ||= get_stores
+    OnlineStoreWeb::Application::STATIC_ASSETS[:products_on_sale] ||= get_products(filterOnSale: true, pageLength: 3)
+  end
+
+
+  def get_user_orders(user)
+    #parse_res(send_get("orders?codClient=#{user}"), {'orders' => []})
+    parse_res(send_get("orders?codClient=SILVA"), {'orders' => []})
+  end
+
+  def get_order(id)
+    parse_res(send_get("orders?#{id}"), nil)
+  end
 
 
   private
@@ -70,7 +103,7 @@ module PrimaveraIntegrationHelper
       req = Net::HTTP::Put.new(url.to_s, initheader = {'Content-Type' => 'application/json'})
       req.body = data
 
-      puts 'Sending Put request to ' + url.to_s
+      puts 'Sending PUT request to ' + url.to_s
 
       send_request(url, req)
     end
@@ -78,8 +111,9 @@ module PrimaveraIntegrationHelper
     # Aux function to send a request and catch exceptions
     def send_request(url, req)
       begin
-        Net::HTTP.start(url.host, url.port) {|http| http.request(req)}
-      rescue Errno::ECONNREFUSED, Timeout::Error, Errno::EINVAL, Errno::ECONNRESET, EOFError, Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError, Net::ProtocolError
+        Net::HTTP.start(url.host, url.port, :read_timeout => 180) {|http| http.request(req)}
+      rescue Errno::ECONNREFUSED, Timeout::Error, Errno::EINVAL, Errno::ECONNRESET, EOFError, Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError, Net::ProtocolError => e
+        puts e.to_s
         nil
       end
     end
@@ -97,6 +131,10 @@ module PrimaveraIntegrationHelper
       end
     end
 
+    def check_res(res, success_code='200')
+      return  res && res.code == success_code
+    end
+
     # {"codClient":"SUSANA", "name":"coiso", "email":"fsdfs", "address":"sdfsdf", "postal_addr":"4444-123", "op_zone":"0", "local":"Porto", "taxpayer_num":"123456789", "currency":"EUR"}
     def user_to_json(user)
       {
@@ -110,5 +148,26 @@ module PrimaveraIntegrationHelper
           'taxpayer_num' => user.taxpayer_num,
           'currency' => 'EUR'
       }.to_json
+    end
+
+    def order_to_json(user, cart)
+      address = "#{user.address}, #{user.postal_address} #{user.local}"
+      order = {
+          'CodClient' => user.username,
+          'Date' => Time.zone.now.strftime('%FT%T'),
+          'DeliveryAddress' => address,
+          'BillingAddress' => address,
+          'Items' => []
+      }
+      cart['items'].each do |_,item|
+        order['Items'] << {
+            'CodProduct' => item['CodProduct'],
+            'Quantity' => item['quantity'],
+            'ValorIEC' => item['IECValue'] || 0,
+            'Discount' => item['Discount'],
+            'UnitPrice' => item['Price']
+        }
+      end
+      return order.to_json
     end
 end

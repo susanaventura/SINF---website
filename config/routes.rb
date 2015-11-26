@@ -11,12 +11,14 @@ Rails.application.routes.draw do
 
   get 'home' => 'static_pages#home'
   get 'products' => 'static_pages#products'
+  get 'points_store' => 'static_pages#points_store'
   get 'stores' => 'static_pages#stores_index'
-  get 'product' => 'static_pages#product'
+  get 'product/:id' => 'static_pages#product', as: 'product'
+  get 'order/:id' => 'orders#show', as: 'order'
 
   get 'checkout/overview', to: 'orders#checkout_overview', as: 'checkout_overview'
   get 'checkout/preview', to: 'orders#checkout_preview', as: 'checkout_preview'
-
+  post 'order/create', to: 'orders#create', as: 'order_create'
 
   get 'users/editaccount/:id' => 'users#edit_account', as: 'edit_account'
   get 'users/editaddress/:id' => 'users#edit_address', as: 'edit_address'
@@ -24,10 +26,10 @@ Rails.application.routes.draw do
   post 'cart/add', to: 'shopping_carts#add_item', as: 'cart_add'
   post 'cart/remove', to: 'shopping_carts#remove_item', as: 'cart_remove'
   post 'cart/update', to: 'shopping_carts#update', as: 'cart_update'
-  get 'cart/clear', to: 'shopping_carts#clear', as: 'cart_clear'
-
-
+  post 'cart/clear', to: 'shopping_carts#clear', as: 'cart_clear'
   get 'cart/test', to: 'shopping_carts#test', as: 'cart_test'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

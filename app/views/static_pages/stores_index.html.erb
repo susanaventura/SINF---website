@@ -8,7 +8,7 @@
       <%= render partial: 'layouts/stores_list', locals: {stores: @stores} %>
     </div>
     <div class="col-md-9">
-      <% @stores.each do |store| %>
+      <% @stores.each do |_,store| %>
           <%= link_to  store['name'], products_path(codStore: store['id']) %> <br>
           <% @store_products[store['id']].each do |product| %>
 
