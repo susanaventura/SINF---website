@@ -25,6 +25,11 @@ ready = function() {
         $(this).width($(this).width()-5);
     });
 */
+
+
+    var productPresentationHeight = $('.desc').outerHeight();
+    $('#myCarouselProductImgs').outerHeight(productPresentationHeight);
+
 };
 
 $(document).ready(ready);

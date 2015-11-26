@@ -51,7 +51,7 @@
                 <% if product['DiscountUnit'] > 0 %>
                     <br>--
                     <br>Discount:
-                    <%= "-#{product['DiscountPerc']}% = #{product['UnitPrice']-product['DiscountUnit']}€" %>
+                    <%= "-#{product['DiscountPerc']}% = -#{product['UnitPrice']-product['DiscountUnit']}€" %>
                 <% end %>
                 <br>--
                 <br>IVA:
@@ -79,7 +79,7 @@
                 <% if product['DiscountUnit'] > 0 %>
                     <br>--
                     <br>Discount:
-                    <%= "-#{product['DiscountPerc']}% = #{product['TotalDiscount']}€" %>
+                    <%= "-#{product['DiscountPerc']}% = -#{product['TotalDiscount']}€" %>
                 <% end %>
                 <br>--
                 <br>IVA:
@@ -124,7 +124,7 @@
 
         <tr class="table-row-highlighted table-cells-border">
           <th colspan="3" style="border-top: 1px solid #B81D22">Total discount</th>
-          <th class="text-right" style="border-top: 1px solid #B81D22"><%= @order['TotalDiscount'].round(2)%>€</th>
+          <th class="text-right" style="border-top: 1px solid #B81D22"><%= "-#{@order['TotalDiscount'].round(2)}€"%></th>
         </tr>
 
         <tr class="table-row-highlighted">
@@ -141,4 +141,3 @@
   </div>
 </div>
 
-</div>

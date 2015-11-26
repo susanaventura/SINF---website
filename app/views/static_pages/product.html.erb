@@ -1,163 +1,153 @@
-<% content_for :view_specific_javascript do %>
+<div class="row">
+  <div class="col-md-3">
+    <%= render partial: 'layouts/categories_list', locals: {categories: @categories} %>
+    <%= render partial: 'layouts/stores_list', locals: {stores: @stores} %>
+  </div>
 
-<script>
-	$(function(){
-		$('#products').slides({
-			preload: true,
-			preloadImage: 'assets/search.png',
-			effect: 'slide, fade',
-			crossfade: true,
-			slideSpeed: 350,
-			fadeSpeed: 500,
-			generateNextPrev: true,
-			generatePagination: false
-		});
-	});
-</script>
+  <div class="col-md-9">
 
-<% end %>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="back-links">
+          <p>Categories >></p>
+        </div>
+      </div>
+    </div>
 
-<div class="main">
-    <div class="content">
-    	<div class="content_top">
-    		<div class="back-links">
-				<p><a href="index.html">Home</a> >>>> <a href="#">Electronics</a></p>
-    	    </div>
-    		<div class="clear"></div>
-    	</div>
-		<div class="section group">
-			<div class="cont-desc span_1_of_2">
-				<div class="product-details">				
-					<div class="grid images_3_of_2">
-						<div id="container">
-							<div id="products_example">
-								<div id="products">
-									<div class="slides_container">
-										<a href="#" target="_blank"><%= image_tag "pentium_processor.png" %></a>
-										<a href="#" target="_blank"><%= image_tag "pentium_processor.png" %></a>
-										<a href="#" target="_blank"><%= image_tag "pentium_processor.png" %></a>					
-										<a href="#" target="_blank"><%= image_tag "pentium_processor.png" %></a>
-										<a href="#" target="_blank"><%= image_tag "pentium_processor.png" %></a>
-										<a href="#" target="_blank"><%= image_tag "pentium_processor.png" %></a>
-									</div>
-									<ul class="pagination">
-										<li><a href="#"><%= image_tag "search.png" %></a></li>
-										<li><a href="#"><%= image_tag "search.png" %></a></li>
-										<li><a href="#"><%= image_tag "search.png" %></a></li>
-										<li><a href="#"><%= image_tag "search.png" %></a></li>
-										<li><a href="#"><%= image_tag "search.png" %></a></li>
-										<li><a href="#"><%= image_tag "search.png" %></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="desc span_3_of_2">
-						<h2><%=@product['Description']%> </h2>
-						<p>Current discount: <%='%.2f' % @product['Discount']%>%</p>					
-						<div class="price">
-							<p>Price: <span><%='%.2f' % @product['Price']%> <%=@product['Currency']%></span></p>
-						</div>
-						<div class="available">
-							<p>Available Options :</p>
-							<ul>
-								<li>Color:
-									<select>
-									<option>Silver</option>
-									<option>Black</option>
-									<option>Dark Black</option>
-									<option>Red</option>
-								</select></li>
-								<li>Size:<select>
-									<option>Large</option>
-									<option>Medium</option>
-									<option>small</option>
-									<option>Large</option>
-									<option>small</option>
-								</select></li>
-								<li>Quality:<select>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select></li>
-							</ul>
-						</div>
-						<div class="share-desc">
-							<div class="button"><span><a href="#">Add to Cart</a></span></div>					
-							<div class="clear"></div>
-						</div>
-						<div class="wish-list">
-							<ul>
-								<li class="wish"><a href="#">Add to Wishlist</a></li>
-								<li class="compare"><a href="#">Add to Compare</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="clear"></div>
-					</div>
-		
-	    <script type="text/javascript">
-    $(document).ready(function () {
-        $('#horizontalTab').easyResponsiveTabs({
-            type: 'default', //Types: default, vertical, accordion           
-            width: 'auto', //auto or any width like 600px
-            fit: true   // 100% fit in a container
-        });
-    });
-   </script>		
-   
-					<div class="content_bottom">
-						<div class="heading">
-							<h3>Related Products</h3>
-						</div>
-						<div class="see">
-							<p><a href="#">See all Products</a></p>
-						</div>
-						<div class="clear"></div>
-					</div>
-					<div class="section group">
-						<div class="grid_1_of_4 images_1_of_4">
-							<a href="#"><img src="assets/pentium_processor.png" alt=""></a>					
-								<div class="price" style="border:none">
-									<div class="add-cart" style="float:none">								
-										<h4><a href="#">Add to Cart</a></h4>
-									</div>
-									<div class="clear"></div>
-								</div>
-							</div>
-							<div class="grid_1_of_4 images_1_of_4">
-								<a href="#"><img src="assets/pentium_processor.png" alt=""></a>
-								<div class="price" style="border:none">
-									<div class="add-cart" style="float:none">								
-										<h4><a href="#">Add to Cart</a></h4>
-									</div>
-									<div class="clear"></div>
-								</div>
-							</div>
-							<div class="grid_1_of_4 images_1_of_4">
-								<a href="#"><img src="assets/pentium_processor.png" alt=""></a>
-								<div class="price" style="border:none">
-									<div class="add-cart" style="float:none">								
-										<h4><a href="#">Add to Cart</a></h4>
-									</div>
-									<div class="clear"></div>
-								</div>
-							</div>
-							<div class="grid_1_of_4 images_1_of_4">
-								<img src="assets/pentium_processor.png" alt="">
-								<div class="price" style="border:none">
-									<div class="add-cart" style="float:none">								
-										<h4><a href="#">Add to Cart</a></h4>
-									</div>
-								<div class="clear"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</div>
+    <div class="row">
+      <div class="col-md-5">
+
+        <div id="myCarouselProductImgs" class="carousel slide" data-ride="carousel">
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <div class="col-md-12 col-sm-12">
+                <div style="width:42%">
+                  <%= image_tag get_image_for_product(@product['CodProduct']), class: 'img-responsive center-block' %>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarouselProductImgs" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="col-md-7 desc span_3_of_2">
+        <h2><%= @product['Description'] %> </h2>
+
+        <div class="price">
+          <p>Price: <span><%= '%.2f' % @product['Price'] %> <%= @product['Currency'] %></span></p>
+        </div>
+
+        <% if @product['Discount'] > 0.0 %>
+            <p class="discount">On sale: <%= '%.2f' % @product['Discount'] %>%</p>
+        <% end %>
+
+        <div class="button" style="float:left"><span><a href="#">Add to Cart</a></span></div>
+        <div class="clear"></div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="clear"></div>
+
+
+    <div class="content_bottom">
+      <div class="heading">
+        <h3>Related Products</h3>
+      </div>
+      <div class="see">
+        <p><a href="#">See all Products</a></p>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="section group">
+      <div class="grid_1_of_4 images_1_of_4">
+        <a href="#"><img src="assets/pentium_processor.png" alt=""></a>
+
+        <div class="price" style="border:none">
+          <div class="add-cart" style="float:none">
+            <h4><a href="#">Add to Cart</a></h4>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="grid_1_of_4 images_1_of_4">
+        <a href="#"><img src="assets/pentium_processor.png" alt=""></a>
+
+        <div class="price" style="border:none">
+          <div class="add-cart" style="float:none">
+            <h4><a href="#">Add to Cart</a></h4>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="grid_1_of_4 images_1_of_4">
+        <a href="#"><img src="assets/pentium_processor.png" alt=""></a>
+
+        <div class="price" style="border:none">
+          <div class="add-cart" style="float:none">
+            <h4><a href="#">Add to Cart</a></h4>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="grid_1_of_4 images_1_of_4">
+        <img src="assets/pentium_processor.png" alt="">
+
+        <div class="price" style="border:none">
+          <div class="add-cart" style="float:none">
+            <h4><a href="#">Add to Cart</a></h4>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
