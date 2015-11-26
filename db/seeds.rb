@@ -21,4 +21,7 @@ Image.create!({ product: 'B0004', path: 'products/Ddram2.jpg' })
 Image.create!({ product: 'A0007.PRETO', path: 'products/preto.jpg' })
 Image.create!({ product: 'B0002', path: 'products/rsz_dvd_usb_20.jpg' })  
 Image.create!({ product: 'A0005', path: 'products/Table.jpg' }) 
+Image.create!({ product: 'XM001', path: 'products/rsz_2montagem.jpg' })
+Image.create!({ product: 'TAPETE', path: 'products/rsz_mouse_pad1.jpg' })
+Image.create!({ product: 'X0001', path: 'products/rsz_equipmento.jpg' })
 #Add entries here
