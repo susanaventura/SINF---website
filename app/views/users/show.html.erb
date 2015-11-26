@@ -1,10 +1,16 @@
 <% provide(:title, 'My account') %>
 
+<<<<<<< HEAD
+
+      <h3> <%=@user.name%> </h3>
+      <h3> Pagina Temporaria </h3>
+=======
 <div class="row">
   <div class="col-md-12 col-md-offset-2">
     <h1 class="title-page">My Account</h1>
   </div>
 </div>
+>>>>>>> af18becd0c72854519caf7adebf1b372543964c9
 
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
@@ -12,12 +18,56 @@
   </div>
 </div>
 
+<<<<<<< HEAD
+    <h1>My Account</h1>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        My Account 
+        Username: <%= @user.username %>
+      </div>
+      <div class="panel-body">My Orders</div>
+      <!--Table-->
+      <table class="table table-bolder">
+        <div class="rows">
+          <div class="col-xs-6 col-md-3"></div>
+          <th>OrderID</th>
+          <th>Date</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Options</th>
+        </div>
+
+      </table>
+      <div class="panel-footer">About Me</div>
+
+      <form>
+        <div class="form-group">
+          <h3> <%=@user.email%> </h3>
+
+          Email: <%= @user.email %>
+          Username: <%= @user.username %>
+          password: <%= @current_user.password %>
+
+          <label for="email1">Email Address</label>
+          <input type="email" class="form-control" id="myAccountEmail" placeholder="Email">
+
+        </div>
+        <div class="form-group">
+
+
+          <label for="emailPassword1">Password</label>
+          <input type="password" class="form-control" id="emailPassword1" placeholder="password">
+        </div>
+      </form>
+
+=======
 <!-- ROW my orders title -->
 <div class="row">
   <div class="col-md-10 col-md-offset-2">
     <div class="header-my-account">
       <h4>My orders</h4>
     </div>
+>>>>>>> af18becd0c72854519caf7adebf1b372543964c9
   </div>
 </div> <!-- /ROW my orders title-->
 
@@ -70,6 +120,10 @@
   <div class="col-md-10 col-md-offset-2">
     <div class="panel panel-default">
 
+<<<<<<< HEAD
+ </div>
+</div>
+=======
       <div class="row" style="margin-top:10px">
         <div class="col-md-11" style="margin-left:10px">
           <p><strong>Current points:</strong> 200 points</p>
@@ -153,3 +207,4 @@
     </div>
   </div>
 </div><!-- /ROW about me-->
+>>>>>>> af18becd0c72854519caf7adebf1b372543964c9
