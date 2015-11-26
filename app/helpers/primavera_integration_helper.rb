@@ -57,8 +57,8 @@ module PrimaveraIntegrationHelper
 
 
   def get_user_orders(user)
-    #parse_res(send_get("orders?codClient=#{user}"), {'orders' => []})
-    parse_res(send_get("orders?codClient=SILVA"), {'orders' => []})
+    parse_res(send_get("orders?codClient=#{user}"), {'orders' => []})
+    #parse_res(send_get("orders?codClient=SILVA"), {'orders' => []})
   end
 
   def get_order(id)

@@ -42,36 +42,95 @@
                 </div>
               </td>
               <td class="text-center">
-                <%= "#{product['UnitPrice']}€" %>
+                <%= "Unit price: #{product['UnitPrice']}€" %>
                 <% if product['ValorIEC'] > 0.0 %>
                     <br>--
                     <br>IEC:
                     <%= product['ValorIEC'] %>
                 <% end %>
-                <% if product['Discount'] > 0 %>
+                <% if product['DiscountUnit'] > 0 %>
                     <br>--
                     <br>Discount:
-                    <%= product['Discount'] %>
+                    <%= "-#{product['DiscountPerc']}% = #{product['UnitPrice']-product['DiscountUnit']}€" %>
                 <% end %>
+                <br>--
+                <br>IVA:
+                <% product_iva = ((product['TaxaIva']/100)*(product['UnitPrice']-product['DiscountUnit'])).round(2) %>
+                <%= "#{product['TaxaIva']}% = #{product_iva}€" %>
+                <br>--
+                <br><strong>Unit final price:
+                <%= "#{(product['UnitPrice']-product['DiscountUnit']+product_iva).round(2)}€" %>
+              </strong>
               </td>
+
               <td class="text-center">
                 <%= product['Quantity'].round() %>
               </td>
-              <td class="text-right">
-                <%= "#{product['TotalPrediscount']}€" %>
-                <% if product['TotalIEC'] > 0.0 %>
+
+
+
+              <td class="text-center">
+                <%= "Products price: #{product['UnitPrice']*product['Quantity']}€" %>
+                <% if product['ValorIEC'] > 0.0 %>
                     <br>--
                     <br>IEC:
-                    <%= "#{product['TotalIEC']}€" %>
+                    <%= product['ValorIEC'] %>
+                <% end %>
+                <% if product['DiscountUnit'] > 0 %>
+                    <br>--
+                    <br>Discount:
+                    <%= "-#{product['DiscountPerc']}% = #{product['TotalDiscount']}€" %>
                 <% end %>
                 <br>--
-                <br>Total:
-                <%= "#{product['Total']}€" %>
+                <br>IVA:
+                <%= "#{product['TaxaIva']}% = #{product['TotalIva'].round(2)}€" %>
+                <br>--
+                <br><strong>Final price:
+                <%= "#{(product['TotalLiq']+product['TotalIva']).round(2)}€" %>
+              </strong>
               </td>
             </tr>
         <% end %>
         <!-- /PRODUCT -->
 
+
+        <tr class="table-row-highlighted">
+          <th colspan="3">Subtotal</th>
+          <th class="text-right"><%= "#{@order['SubTotal']}€"%></th>
+        </tr>
+
+        <tr class="table-row-highlighted">
+          <th colspan="3">Total IEC</th>
+          <th class="text-right"><%= "#{@order['TotalIEC']}€"%></th>
+        </tr>
+
+        <tr class="table-row-highlighted">
+          <th colspan="3">Total IVA</th>
+          <th class="text-right"><%= "#{@order['TotalIva']}€"%></th>
+        </tr>
+
+        <tr class="table-row-highlighted table-cells-border">
+          <th colspan="3">
+            Shipping
+            <br>
+
+            <p style="padding-left:5px">
+              <small>Method: CTT</small>
+            </p>
+          </th>
+          <th class="text-right"><%= "#{@order['TotalShippingCosts']}€"%></th>
+        </tr>
+
+
+        <tr class="table-row-highlighted table-cells-border">
+          <th colspan="3" style="border-top: 1px solid #B81D22">Total discount</th>
+          <th class="text-right" style="border-top: 1px solid #B81D22"><%= @order['TotalDiscount'].round(2)%>€</th>
+        </tr>
+
+        <tr class="table-row-highlighted">
+          <th colspan="3" class="text-right"><h2><strong>Final Billing Value</strong></h2></th>
+          <th class="text-right"><h2><strong><%= @order['Total'].round(2)%>€</strong></h2></th>
+        </tr>
 
       </table>
     </div>
