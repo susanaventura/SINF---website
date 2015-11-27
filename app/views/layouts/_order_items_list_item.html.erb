@@ -24,7 +24,7 @@
         <% if discount_unit > 0 %>
             <br>--
             <br>Discount:
-            <%= "-#{discount_perc}% = #{price_unit-discount_unit}€" %>
+            <%= "-#{discount_perc}% = -#{price_unit-discount_unit}€" %>
         <% end %>
         <br>--
         <br>IVA:
@@ -52,7 +52,7 @@
         <% if discount_unit > 0 %>
             <br>--
             <br>Discount:
-            <%= "-#{discount_perc}% = #{product_total_discount.round(2)}€" %>
+            <%= "-#{discount_perc}% = -#{product_total_discount.round(2)}€" %>
         <% end %>
         <br>--
         <br>IVA:
