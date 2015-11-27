@@ -4,8 +4,6 @@ class OrdersController < ApplicationController
   def show
     @order = get_order(params.to_param)
     params.to_param
-
-    render json: @order
   end
 
   def checkout_overview

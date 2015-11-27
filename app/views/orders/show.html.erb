@@ -28,67 +28,23 @@
 
         <!-- PRODUCT -->
         <% @order['Items'].each do |product| %>
-            <tr>
-              <td>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#">
-                      <%= image_tag get_image_for_product(product), class: 'media-object', width: '50%' %>
-                    </a>
-                  </div>
-                  <div class="media-body" style="width:50%">
-                    <a href="#"><h4 class="media-heading order-product_name"><%= product['Description'] %></h4></a>
-                  </div>
-                </div>
-              </td>
-              <td class="text-center">
-                <%= "Unit price: #{product['UnitPrice']}€" %>
-                <% if product['ValorIEC'] > 0.0 %>
-                    <br>--
-                    <br>IEC:
-                    <%= product['ValorIEC'] %>
-                <% end %>
-                <% if product['DiscountUnit'] > 0 %>
-                    <br>--
-                    <br>Discount:
-                    <%= "-#{product['DiscountPerc']}% = #{product['UnitPrice']-product['DiscountUnit']}€" %>
-                <% end %>
-                <br>--
-                <br>IVA:
-                <% product_iva = ((product['TaxaIva']/100)*(product['UnitPrice']-product['DiscountUnit'])).round(2) %>
-                <%= "#{product['TaxaIva']}% = #{product_iva}€" %>
-                <br>--
-                <br><strong>Unit final price:
-                <%= "#{(product['UnitPrice']-product['DiscountUnit']+product_iva).round(2)}€" %>
-              </strong>
-              </td>
+            <%
+               quantity = product['Quantity']
+               price_unit = product['UnitPrice']
+               discount_perc = product['DiscountPerc']
+               discount_unit = product['DiscountUnit']
+               iva_perc = product['TaxaIva']
+               iva_unit = (iva_perc/100.0)*(price_unit-discount_unit)
+               valor_iec = product['ValorIEC']
 
-              <td class="text-center">
-                <%= product['Quantity'].round() %>
-              </td>
+               product_total_liquid = product['TotalLiq']
+               product_total_discount = product['TotalDiscount']
+               product_total_iva = product['TotalIva']
 
+            %>
+            <%= render partial: 'layouts/order_items_list_item', locals: {product: product, show_details: true, quantity: quantity, price_unit: price_unit, discount_perc: discount_perc, discount_unit: discount_unit, iva_perc: iva_perc, iva_unit: iva_unit,
+                                                                          valor_iec: valor_iec, product_total_liquid: product_total_liquid, product_total_iva: product_total_iva, product_total_discount: product_total_discount} %>
 
-              <td class="text-center">
-                <%= "Products price: #{product['UnitPrice']*product['Quantity']}€" %>
-                <% if product['ValorIEC'] > 0.0 %>
-                    <br>--
-                    <br>IEC:
-                    <%= product['ValorIEC'] %>
-                <% end %>
-                <% if product['DiscountUnit'] > 0 %>
-                    <br>--
-                    <br>Discount:
-                    <%= "-#{product['DiscountPerc']}% = #{product['TotalDiscount']}€" %>
-                <% end %>
-                <br>--
-                <br>IVA:
-                <%= "#{product['TaxaIva']}% = #{product['TotalIva'].round(2)}€" %>
-                <br>--
-                <br><strong>Final price:
-                <%= "#{(product['TotalLiq']+product['TotalIva']).round(2)}€" %>
-              </strong>
-              </td>
-            </tr>
         <% end %>
         <!-- /PRODUCT -->
 

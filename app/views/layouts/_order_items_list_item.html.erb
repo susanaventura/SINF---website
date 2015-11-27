@@ -1,0 +1,66 @@
+<% if_show_details = defined?(show_details) && show_details %>
+
+<tr>
+  <td>
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <%= image_tag get_image_for_product(product), class: 'media-object', width: '50%' %>
+        </a>
+      </div>
+      <div class="media-body" style="width:50%">
+        <a href="#"><h4 class="media-heading order-product_name"><%= product['Description'] %></h4></a>
+      </div>
+    </div>
+  </td>
+  <td class="text-center">
+    <% if if_show_details %>
+        <%= "Unit price: #{price_unit}€" %>
+        <% if valor_iec > 0.0 %>
+            <br>--
+            <br>IEC:
+            <%= valor_iec %>
+        <% end %>
+        <% if discount_unit > 0 %>
+            <br>--
+            <br>Discount:
+            <%= "-#{discount_perc}% = #{price_unit-discount_unit}€" %>
+        <% end %>
+        <br>--
+        <br>IVA:
+        <%= "#{iva_perc}% = #{iva_unit.round(2)}€" %>
+        <br>--
+        <br><strong>Unit final price: <%= "#{(price_unit-discount_unit+iva_unit).round(2)}€" %> </strong>
+    <% else %>
+        <%= "#{price_unit-discount_unit}€" %>
+    <% end %>
+  </td>
+
+  <td class="text-center">
+    <%= quantity %>
+  </td>
+
+
+  <td class="text-center">
+    <% if if_show_details %>
+        <%= "Products price: #{price_unit*quantity}€" %>
+        <% if valor_iec> 0.0 %>
+            <br>--
+            <br>IEC:
+            <%= valor_iec %>
+        <% end %>
+        <% if discount_unit > 0 %>
+            <br>--
+            <br>Discount:
+            <%= "-#{discount_perc}% = #{product_total_discount.round(2)}€" %>
+        <% end %>
+        <br>--
+        <br>IVA:
+        <%= "#{iva_perc}% = #{product_total_iva.round(2)}€" %>
+        <br>--
+        <br><strong>Final price: <%= "#{(product_total_liquid + product_total_iva).round(2)}€" %></strong>
+    <% else %>
+        <%= "#{(price_unit-discount_unit)*quantity}€" %>
+    <% end %>
+  </td>
+</tr>

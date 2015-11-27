@@ -55,67 +55,11 @@
                total_iva += product_total_iva
                total_discount += product_total_discount
                total_iec += quantity * valor_iec
+
             %>
-            <tr>
-              <td>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#">
-                      <%= image_tag get_image_for_product(product), class: 'media-object', width: '50%' %>
-                    </a>
-                  </div>
-                  <div class="media-body" style="width:50%">
-                    <a href="#"><h4 class="media-heading order-product_name"><%= product['Description'] %></h4></a>
-                  </div>
-                </div>
-              </td>
-              <td class="text-center">
-                <%= "Unit price: #{price_unit}€" %>
-                <% if valor_iec > 0.0 %>
-                    <br>--
-                    <br>IEC:
-                    <%= valor_iec %>
-                <% end %>
-                <% if discount_unit > 0 %>
-                    <br>--
-                    <br>Discount:
-                    <%= "-#{discount_perc}% = #{price_unit-discount_unit}€" %>
-                <% end %>
-                <br>--
-                <br>IVA:
-                <%= "#{iva_perc}% = #{iva_unit.round(2)}€" %>
-                <br>--
-                <br><strong>Unit final price:
-                <%= "#{(price_unit-discount_unit+iva_unit).round(2)}€" %>
-              </strong>
-              </td>
+            <%= render partial: 'layouts/order_items_list_item', locals: {product: product, show_details: true, quantity: quantity, price_unit: price_unit, discount_perc: discount_perc, discount_unit: discount_unit, iva_perc: iva_perc, iva_unit: iva_unit,
+                valor_iec: valor_iec, product_total_liquid: product_total_liquid, product_total_iva: product_total_iva, product_total_discount: product_total_discount} %>
 
-              <td class="text-center">
-                <%= quantity %>
-              </td>
-
-
-              <td class="text-center">
-                <%= "Products price: #{price_unit*quantity}€" %>
-                <% if valor_iec> 0.0 %>
-                    <br>--
-                    <br>IEC:
-                    <%= valor_iec %>
-                <% end %>
-                <% if discount_unit > 0 %>
-                    <br>--
-                    <br>Discount:
-                    <%= "-#{discount_perc}% = #{product_total_discount.round(2)}€" %>
-                <% end %>
-                <br>--
-                <br>IVA:
-                <%= "#{iva_perc}% = #{product_total_iva.round(2)}€" %>
-                <br>--
-                <br><strong>Final price:
-                <%= "#{(product_total_liquid + product_total_iva).round(2)}€" %>
-              </strong>
-              </td>
-            </tr>
         <% end %>
         <!-- /PRODUCT -->
 

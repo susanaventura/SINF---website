@@ -11,27 +11,101 @@
 </div>
 
 <% if cart_empty? %>
-  <div class="row">
-    <div class="col-md-12 col-md-offset-1">
-      <p>Your cart is empty.</p>
-      <p>To add items to your cart, click on the "Add to Cart" button next to an item.</p>
-      <p></p>
+    <div class="row">
+      <div class="col-md-12 col-md-offset-1">
+        <p>Your cart is empty.</p>
+
+        <p>To add items to your cart, click on the "Add to Cart" button next to an item.</p>
+
+        <p></p>
+      </div>
     </div>
-  </div>
-<%else%>
-  <div class="row">
-    <div class="col-md-12 col-md-offset-1">
-      <p>Until now you selected the following items:</p>
+<% else %>
+    <div class="row">
+      <div class="col-md-12 col-md-offset-1">
+        <p>Until now you selected the following items:</p>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <%= render partial: 'layouts/order_items_list', locals:{overview: true, cart: @cart}%>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+
+        <%= form_tag cart_update_path, :method => :post do %>
+            <div class="panel panel-default order_list_products box-shadow--16dp">
+              <table class="table">
+
+                <tr class="table-row-highlighted table-cells-border">
+                  <th>Product</th>
+                  <th class="text-center">Price</th>
+                  <th class="text-center">Quantity</th>
+                  <th class="text-right">Total product price</th>
+                </tr>
+
+                <%
+                   subtotal = 0
+                   total_iec = 0
+                   total_iva = 0
+                   total_discount = 0
+                %>
+                <!-- PRODUCT -->
+                <% @cart['items'].each do |_,product| %>
+                    <%
+                       quantity = product['quantity']
+                       price_unit = product['Price']
+                       discount_perc = product['Discount']
+                       discount_unit = price_unit * discount_perc/100.0
+                       iva_perc = product['IVAValue']
+                       iva_unit = (iva_perc/100.0)*(price_unit-discount_unit)
+                       valor_iec = product['IECValue']
+
+                       product_total_liquid = quantity * (price_unit-discount_unit)
+                       product_total_discount = quantity * discount_unit
+                       product_total_iva = quantity * iva_unit
+
+                       subtotal += product_total_liquid
+                       total_iva += product_total_iva
+                       total_discount += product_total_discount
+                       total_iec += quantity * valor_iec
+
+                    %>
+                    <%= render partial: 'layouts/order_items_list_item', locals: {product: product, show_details: false, quantity: quantity, price_unit: price_unit, discount_perc: discount_perc, discount_unit: discount_unit, iva_perc: iva_perc, iva_unit: iva_unit,
+                                                                                  valor_iec: valor_iec, product_total_liquid: product_total_liquid, product_total_iva: product_total_iva, product_total_discount: product_total_discount} %>
+
+                <% end %>
+                <!-- /PRODUCT -->
+
+                <tr class="table-row-highlighted">
+                  <th colspan="3">Subtotal</th>
+                  <th class="text-right"><%= subtotal.round(2) %></th>
+                </tr>
+
+                <tr class="table-row-highlighted table-cells-border">
+                  <th colspan="3" style="border-top: 1px solid #B81D22">Total discount</th>
+                  <th class="text-right" style="border-top: 1px solid #B81D22"><%= total_discount.round(2) %>€
+                  </th>
+                </tr>
+
+
+              </table>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-6 text-left">
+                <button class="btn btn-primary btn-light-red">Back to store</button>
+              </div>
+              <div class="col-md-6 text-right">
+                <%= submit_tag 'Update Cart', class: 'btn btn-primary btn-red' %>
+                <%= link_to 'Clear Cart', cart_clear_path, :method => :post, class: 'btn btn-primary btn-red' %>
+                <%= link_to 'Checkout', checkout_preview_path, class: 'btn btn-primary btn-red' %>
+              </div>
+            </div>
+
+        <% end %>
+
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+      </div>
     </div>
-  </div>
-<%end%>
+<% end %>
 </div>
