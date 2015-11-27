@@ -16,17 +16,18 @@ class StaticPagesController < ApplicationController
       redirect_to home_path
     end
   end
-  
+
   def product
     @product = get_product(params[:id])
     if !@product
       redirect_to home_path
     end
+    @related_products = get_products(codCategory: @product['Category'], pageLength: 3)['products'].reject { |h| @product['CodProduct'].include? h['CodProduct'] }
   end
 
   def stores_index
     @store_products = {}
-    @stores.each do |_,store|
+    @stores.each do |_, store|
       @store_products[store['id']] = get_products(codStore: store['id'], pageLength: 3)['products']
     end
   end
@@ -43,6 +44,8 @@ class StaticPagesController < ApplicationController
       redirect_to home_path
     end
   end
+
+
 
 end
 
