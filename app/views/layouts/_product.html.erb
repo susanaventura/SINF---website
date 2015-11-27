@@ -19,7 +19,7 @@
           <% if params[:filterPoints] %> <p><span class="rupees"><%= p['Points'].round() %> points</span></p>
           <% else %>
               <% if p['Discount'] == 0.0 %>
-                  <p><span class="rupees"><%= p['Price'].round(2) %>€</span></p>
+                  <p style="margin-bottom:0; padding-bottom:0;"><span class="rupees"><%= p['Price'].round(2) %>€</span></p>
               <% else %>
                   <p style="margin-bottom:0; padding-bottom:0;">
                     <span class="rupees"><%= (p['Price']-(p['Discount']/100*p['Price'])).round(2) %>€</span>
@@ -32,10 +32,17 @@
     </div>
   </div>
 
-  <% if p['Discount'] > 0.0 && !params[:filterPoints]%>
+  <% if p['Discount'] > 0.0 && !params[:filterPoints] %>
       <div class="row">
         <div class="col-md-12">
           <p class="discount" align="right">(<%= p['Discount'].round() %>% off)</p>
+        </div>
+      </div>
+  <% end %>
+  <% if p['Discount'] == 0.0 && !params[:filterPoints] %>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="discount" align="right" style="visibility: hidden;">(<%= p['Discount'].round() %>% off)</p>
         </div>
       </div>
   <% end %>

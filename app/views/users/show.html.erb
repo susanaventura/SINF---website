@@ -38,7 +38,7 @@
 
         <% @orders.each do |o| %>
             <tr>
-              <td><%=o['CodOrder']%></td>
+              <td><%= "#{o['Serie']}-#{o['NumDoc']}"%></td>
               <td><%=o['Date'].to_time.to_formatted_s(:long)%></td>
               <td><%=o['Total'].round(2)%>€</td>
               <td><%=o['Status']%></td>
