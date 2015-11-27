@@ -67,7 +67,7 @@
                        total_iec += quantity * valor_iec
 
                     %>
-                    <%= render partial: 'layouts/order_items_list_item', locals: {product: product, show_details: false, quantity: quantity, price_unit: price_unit, discount_perc: discount_perc, discount_unit: discount_unit, iva_perc: iva_perc, iva_unit: iva_unit,
+                    <%= render partial: 'layouts/order_items_list_item', locals: {product: product, update_form: true, show_details: false, quantity: quantity, price_unit: price_unit, discount_perc: discount_perc, discount_unit: discount_unit, iva_perc: iva_perc, iva_unit: iva_unit,
                                                                                   valor_iec: valor_iec, product_total_liquid: product_total_liquid, product_total_iva: product_total_iva, product_total_discount: product_total_discount} %>
 
                 <% end %>

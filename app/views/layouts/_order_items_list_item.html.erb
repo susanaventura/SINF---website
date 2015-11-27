@@ -1,4 +1,5 @@
-<% if_show_details = defined?(show_details) && show_details %>
+<% is_show_details = defined?(show_details) && show_details %>
+<% is_update_form = defined?(update_form) && update_form %>
 
 <tr>
   <td>
@@ -14,7 +15,7 @@
     </div>
   </td>
   <td class="text-center">
-    <% if if_show_details %>
+    <% if is_show_details %>
         <%= "Unit price: #{price_unit}€" %>
         <% if valor_iec > 0.0 %>
             <br>--
@@ -24,7 +25,7 @@
         <% if discount_unit > 0 %>
             <br>--
             <br>Discount:
-            <%= "-#{discount_perc}% = -#{price_unit-discount_unit}€" %>
+            <%= "-#{discount_perc}% = -#{discount_unit}€" %>
         <% end %>
         <br>--
         <br>IVA:
@@ -37,12 +38,19 @@
   </td>
 
   <td class="text-center">
-    <%= quantity %>
+    <% if is_update_form %>
+        <input name=<%= "cart[#{product['CodProduct']}]" %> type="number" value=<%= product['quantity'] %> min="0" max="100" step="1" class="custom-form-control">
+        <%= link_to({controller: 'shopping_carts', action: 'remove_item', item: product['CodProduct']}, :method => :post) do %>
+            <span class="glyphicon glyphicon-remove"></span>
+        <% end %>
+    <% else %>
+        <%= product['quantity'] %>
+    <% end %>
   </td>
 
 
   <td class="text-center">
-    <% if if_show_details %>
+    <% if is_show_details %>
         <%= "Products price: #{price_unit*quantity}€" %>
         <% if valor_iec> 0.0 %>
             <br>--
