@@ -68,6 +68,7 @@ module ShoppingCartsHelper
       product_total_liquid = quantity * (price_unit-discount_unit)
       product_total_discount = quantity * discount_unit
       product_total_iva = quantity * iva_unit
+      product_total_iec = quantity * valor_iec
 
       subtotal += product_total_liquid
       total_iva += product_total_iva
@@ -80,6 +81,7 @@ module ShoppingCartsHelper
       cart['items'][key]['product_total_liquid'] = product_total_liquid
       cart['items'][key]['product_total_discount'] = product_total_discount
       cart['items'][key]['product_total_iva'] = product_total_iva
+      cart['items'][key]['product_total_iec'] = product_total_iec
     end
 
     session[:cart]['subtotal'] = subtotal

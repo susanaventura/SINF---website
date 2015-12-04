@@ -42,7 +42,8 @@
                                 valor_iec: product['IECValue'],
                                 product_total_liquid: product['product_total_liquid'],
                                 product_total_iva: product['product_total_iva'],
-                                product_total_discount: product['product_total_discount']} %>
+                                product_total_discount: product['product_total_discount'],
+                                product_total_iec: product['product_total_iec']} %>
 
         <% end %>
         <!-- /PRODUCT -->
@@ -50,30 +51,17 @@
 
         <tr class="table-row-highlighted">
           <th colspan="3">Subtotal</th>
-          <th class="text-right"><%= "#{@cart['subtotal']}€" %></th>
+          <th class="text-right"><%= "#{@cart['subtotal'].round(2)}€" %></th>
         </tr>
 
         <tr class="table-row-highlighted">
           <th colspan="3">Total IEC</th>
-          <th class="text-right"><%= "#{@cart['total_iec']}€" %></th>
+          <th class="text-right"><%= "#{@cart['total_iec'].round(2)}€" %></th>
         </tr>
 
         <tr class="table-row-highlighted">
           <th colspan="3">Total IVA</th>
-          <th class="text-right"><%= "#{@cart['total_iva']}€" %></th>
-        </tr>
-
-        <tr class="table-row-highlighted table-cells-border">
-          <th colspan="3">
-            Shipping
-            <br>
-
-            <p style="padding-left:5px">
-              <small>Method: CTT</small>
-            </p>
-          </th>
-          <th class="text-right">0.0€</th>
-          <!-- TODO -->
+          <th class="text-right"><%= "#{@cart['total_iva'].round(2)}€" %></th>
         </tr>
 
 

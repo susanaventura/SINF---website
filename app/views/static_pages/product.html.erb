@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="back-links">
-          <p>Categories >> <%=@categories[@product['Category']]['name']%></p>
+          <p>Categories >> <%= @categories[@product['Category']]['name'] %></p>
         </div>
       </div>
     </div>
@@ -51,9 +51,23 @@
       <div class="col-md-7 desc span_3_of_2">
         <h2><%= @product['Description'] %> </h2>
 
+        <%
+           price_liquid = @product['Price']
+           price_with_discount = price_liquid - @product['Discount']/100 * @product['Price']
+           price_with_iva = price_with_discount * (1 + @product['IVAValue']/100)
+           price = price_with_iva + @product['IECValue']
+        %>
         <div class="price">
-          <p>Price: <span><%= '%.2f' % @product['Price'] %> <%= @product['Currency'] %></span></p>
+          <p>Price: <span><%= '%.2f' % price %> <%= @product['Currency'] %></span></p>
         </div>
+        <div>
+          <p>IVA: <span><%= @product['IVAValue'] %>%</span>
+          <% if (@product['IECValue']) %>
+              IEC: <span><%= '%.2f' % @product['IECValue'] %> <%= @product['Currency'] %></span>
+          <% end %>
+          </p>
+        </div>
+
 
         <% if @product['Discount'] > 0.0 %>
             <p class="discount">On sale: <%= '%.2f' % @product['Discount'] %>%</p>

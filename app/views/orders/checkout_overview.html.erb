@@ -53,14 +53,15 @@
                                         valor_iec: product['IECValue'],
                                         product_total_liquid: product['product_total_liquid'],
                                         product_total_iva: product['product_total_iva'],
-                                        product_total_discount: product['product_total_discount']} %>
+                                        product_total_discount: product['product_total_discount'],
+                                        product_total_iec: product['product_total_iec']} %>
 
                 <% end %>
                 <!-- /PRODUCT -->
 
                 <tr class="table-row-highlighted">
                   <th colspan="3">Subtotal</th>
-                  <th class="text-right"><%= @cart['subtotal'].round(2) %></th>
+                  <th class="text-right"><%= (@cart['subtotal']+@cart['total_iva']+@cart['total_iec'] ).round(2) %>€</th>
                 </tr>
 
                 <tr class="table-row-highlighted table-cells-border">

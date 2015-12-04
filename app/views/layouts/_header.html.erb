@@ -27,7 +27,7 @@
   <div class="cart">
     <p>Welcome to our Online Store! <%= link_to checkout_overview_path do %> <span>Cart:</span> <%end%>
 
-    <div id="dd" class="wrapper-dropdown-2">  <%= "#{cart['total_items']} item(s) - #{cart['subtotal'].round(2)}€" %>
+    <div id="dd" class="wrapper-dropdown-2">  <%= "#{cart['total_items']} item(s) - #{(cart['subtotal'] + cart['total_iva'] + cart['total_iec']).round(2)}€" %>
       <ul class="dropdown">
         <% if cart_empty? %>
             <li>You have no items in your Shopping cart</li>
@@ -36,7 +36,7 @@
                 <li>
                   <%= "#{item['quantity']}x "%>
                   <%= link_to truncate(item['Description']), product_path(item['CodProduct']) %>
-                  <%=" - #{(item['quantity'] * item['Price'].to_f).round(2)}€" %>
+                  <%=" - #{(item['product_total_liquid'] + item['product_total_iva'] + item['product_total_iec']).round(2)}€" %>
                 </li>
             <% end %>
         <% end %>

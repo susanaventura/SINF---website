@@ -31,9 +31,9 @@
         <br>IVA:
         <%= "#{iva_perc}% = #{iva_unit.round(2)}€" %>
         <br>--
-        <br><strong>Unit final price: <%= "#{(price_unit-discount_unit+iva_unit).round(2)}€" %> </strong>
+        <br><strong>Unit final price: <%= "#{(price_unit-discount_unit+iva_unit+valor_iec).round(2)}€" %> </strong>
     <% else %>
-        <%= "#{price_unit-discount_unit}€" %>
+        <%= "#{(price_unit-discount_unit+iva_unit+valor_iec).round(2)}€" %>
     <% end %>
   </td>
 
@@ -66,9 +66,9 @@
         <br>IVA:
         <%= "#{iva_perc}% = #{product_total_iva.round(2)}€" %>
         <br>--
-        <br><strong>Final price: <%= "#{(product_total_liquid + product_total_iva).round(2)}€" %></strong>
+        <br><strong>Final price: <%= "#{(product_total_liquid + product_total_iva + product_total_iec).round(2)}€" %></strong>
     <% else %>
-        <%= "#{(price_unit-discount_unit)*quantity}€" %>
+        <%= "#{(product_total_liquid + product_total_iva + product_total_iec).round(2)}€" %>
     <% end %>
   </td>
 </tr>

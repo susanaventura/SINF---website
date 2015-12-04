@@ -28,22 +28,21 @@
 
         <!-- PRODUCT -->
         <% @order['Items'].each do |product| %>
-            <%
-               quantity = product['Quantity']
-               price_unit = product['UnitPrice']
-               discount_perc = product['DiscountPerc']
-               discount_unit = product['DiscountUnit']
-               iva_perc = product['TaxaIva']
-               iva_unit = (iva_perc/100.0)*(price_unit-discount_unit)
-               valor_iec = product['ValorIEC']
-
-               product_total_liquid = product['TotalLiq']
-               product_total_discount = product['TotalDiscount']
-               product_total_iva = product['TotalIva']
-
-            %>
-            <%= render partial: 'layouts/order_items_list_item', locals: {product: product, show_details: true, quantity: quantity, price_unit: price_unit, discount_perc: discount_perc, discount_unit: discount_unit, iva_perc: iva_perc, iva_unit: iva_unit,
-                                                                          valor_iec: valor_iec, product_total_liquid: product_total_liquid, product_total_iva: product_total_iva, product_total_discount: product_total_discount} %>
+            <%= render partial: 'layouts/order_items_list_item',
+                       locals: {
+                           product: product, show_details: true,
+                           quantity: product['Quantity'],
+                           price_unit: product['UnitPrice'],
+                           discount_perc: product['DiscountPerc'],
+                           discount_unit: product['DiscountUnit'],
+                           iva_perc: product['TaxaIva'],
+                           iva_unit: ( product['TaxaIva']/100.0)*(product['UnitPrice']-product['DiscountUnit']),
+                           valor_iec: product['ValorIEC'],
+                           product_total_liquid: product['TotalLiq'],
+                           product_total_iva: product['TotalDiscount'],
+                           product_total_discount: product['TotalIva'],
+                           product_total_iec: product['TotalIEC']
+                       } %>
 
         <% end %>
         <!-- /PRODUCT -->

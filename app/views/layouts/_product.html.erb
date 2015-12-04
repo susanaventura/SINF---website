@@ -18,12 +18,18 @@
         <div class="price-number">
           <% if params[:filterPoints] %> <p><span class="rupees" <%if current_user.current_points < p['Points'].round()%>style="color:red"<%end%>><%= p['Points'].round() %> points</span></p>
           <% else %>
+              <%
+                 price_liquid = p['Price']
+                 price_with_discount = price_liquid - p['Discount']/100 * p['Price']
+                 price_with_iva = price_with_discount * (1 + p['IVAValue']/100)
+                 price = price_with_iva + p['IECValue']
+              %>
               <% if p['Discount'] == 0.0 %>
-                  <p style="margin-bottom:0; padding-bottom:0;"><span class="rupees"><%= p['Price'].round(2) %>€</span>
+                  <p style="margin-bottom:0; padding-bottom:0;"><span class="rupees"><%= price.round(2) %>€</span>
                   </p>
               <% else %>
                   <p style="margin-bottom:0; padding-bottom:0;">
-                    <span class="rupees"><%= (p['Price']-(p['Discount']/100*p['Price'])).round(2) %>€</span>
+                    <span class="rupees"><%= price.round(2) %>€</span>
                     <del><%= p['Price'].round(2) %>€</del>
                   </p>
               <% end %>
