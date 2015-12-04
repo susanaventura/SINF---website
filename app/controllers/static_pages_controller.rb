@@ -33,6 +33,7 @@ class StaticPagesController < ApplicationController
   end
 
   def points_store
+    #@user = find_user_with_pri_info(params[:session][:username])
     params[:page] ||= 1
     pri_products = get_products(params.permit(:page, :filterPoints))
     if pri_products

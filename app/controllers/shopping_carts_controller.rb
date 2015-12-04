@@ -24,14 +24,14 @@ class ShoppingCartsController < ApplicationController
   end
 
   def test
-    #get_cart
-    #render :json => @cart
-
-    products = get_products({})
-    session.delete(:cart)
     get_cart
-    cart_add_item(products['products'].first)
     render :json => @cart
+
+    #products = get_products({})
+    #session.delete(:cart)
+    #get_cart
+    #cart_add_item(products['products'].first)
+    #render :json => @cart
 
   end
 
