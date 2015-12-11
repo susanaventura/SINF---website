@@ -16,7 +16,7 @@
     <div class="col-md-12">
       <div class="price-details">
         <div class="price-number">
-          <% if params[:filterPoints] %> <p><span class="rupees" <%if current_user.current_points < p['Points'].round()%>style="color:red"<%end%>><%= p['Points'].round() %> points</span></p>
+          <% if params[:filterPoints] %> <p><span class="rupees" <%if remaining_points < p['Points'].round()%>style="color:red"<%end%>><%= p['Points'].round() %> points</span></p>
           <% else %>
               <%
                  price_liquid = p['Price']
@@ -57,8 +57,10 @@
   <div class="row">
     <div class="col-md-12">
       <div class="add-cart">
-        <% if !params[:filterPoints] || current_user.current_points >= p['Points'].round()%>
-            <h4><%= link_to 'Add to Cart', {controller: 'shopping_carts', action: 'add_item', item: p['CodProduct']}, :method => :post %></h4>
+        <% if !params[:filterPoints] %>
+            <h4><%= link_to 'Add to Cart', {controller: 'shopping_carts', action: 'add_item', item: p['CodProduct'] }, :method => :post %></h4>
+        <% elsif (remaining_points || 0) >= p['Points'].round()%>
+            <h4><%= link_to 'Add to Cart', {controller: 'shopping_carts', action: 'add_item', item: p['CodProduct'], points: true }, :method => :post %></h4>
         <% end %>
       </div>
     </div>

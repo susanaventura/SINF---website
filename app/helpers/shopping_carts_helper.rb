@@ -8,7 +8,7 @@ module ShoppingCartsHelper
     session[:cart]['total_items'] ||= 0
     session[:cart]['total_iec'] ||= 0.0
     session[:cart]['total_iva'] ||= 0.0
-
+    session[:cart]['total_points'] ||= 0.0
 
     session[:cart]
   end
@@ -17,12 +17,18 @@ module ShoppingCartsHelper
     get_cart['items'].count == 0
   end
 
-  def cart_add_item(item)
+  def cart_add_item(item, points)
     get_cart
     i = item['CodProduct']
+    if (item['Points']>0 && points)
+      i += '_P'
+    end
     session[:cart]['items'][i] ||= item
     session[:cart]['items'][i]['quantity'] ||= 0
     session[:cart]['items'][i]['quantity'] += 1
+    if (item['Points']>0 && points)
+      session[:cart]['items'][i]['Discount'] = 100;
+    end
 
     cart_update_totals
   end
@@ -53,6 +59,7 @@ module ShoppingCartsHelper
     total_iva = 0
     total_discount = 0
     total_items = 0
+    total_points = 0
 
     cart = get_cart
 
@@ -69,12 +76,16 @@ module ShoppingCartsHelper
       product_total_discount = quantity * discount_unit
       product_total_iva = quantity * iva_unit
       product_total_iec = quantity * valor_iec
+      product_total_points = quantity * product['Points']
 
       subtotal += product_total_liquid
       total_iva += product_total_iva
       total_discount += product_total_discount
-      total_iec += quantity * valor_iec
+      total_iec += product_total_iec
       total_items += quantity
+      if discount_perc == 100
+        total_points += product_total_points
+      end
 
       cart['items'][key]['discount_unit'] = discount_unit
       cart['items'][key]['iva_unit'] = iva_unit
@@ -82,6 +93,7 @@ module ShoppingCartsHelper
       cart['items'][key]['product_total_discount'] = product_total_discount
       cart['items'][key]['product_total_iva'] = product_total_iva
       cart['items'][key]['product_total_iec'] = product_total_iec
+      cart['items'][key]['product_total_points'] = product_total_points
     end
 
     session[:cart]['subtotal'] = subtotal
@@ -89,7 +101,7 @@ module ShoppingCartsHelper
     session[:cart]['total_iva'] = total_iva
     session[:cart]['total_discount'] = total_discount
     session[:cart]['total_items'] = total_items
-
+    session[:cart]['total_points'] = total_points
   end
 
 

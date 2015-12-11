@@ -24,6 +24,8 @@
     <div class="row">
       <div class="col-md-12 col-md-offset-1">
         <p>Until now you selected the following items:</p>
+
+        <p>Available points: <%= current_user.current_points %></p>
       </div>
     </div>
     <div class="row">
@@ -41,11 +43,13 @@
                 </tr>
 
                 <!-- PRODUCT -->
-                <% @cart['items'].each do |_,product| %>
+                <% @cart['items'].each do |key, product| %>
                     <%= render partial: 'layouts/order_items_list_item',
                                locals: {product: product, update_form: true, show_details: false,
+                                        key: key,
                                         quantity: product['quantity'],
                                         price_unit: product['Price'],
+                                        points_unit: product['Points'],
                                         discount_perc: product['Discount'],
                                         discount_unit: product['discount_unit'],
                                         iva_perc: product['IVAValue'],
@@ -54,15 +58,28 @@
                                         product_total_liquid: product['product_total_liquid'],
                                         product_total_iva: product['product_total_iva'],
                                         product_total_discount: product['product_total_discount'],
-                                        product_total_iec: product['product_total_iec']} %>
+                                        product_total_iec: product['product_total_iec'],
+                                        product_total_points: product['product_total_points']} %>
 
                 <% end %>
                 <!-- /PRODUCT -->
 
                 <tr class="table-row-highlighted">
                   <th colspan="3">Subtotal</th>
-                  <th class="text-right"><%= (@cart['subtotal']+@cart['total_iva']+@cart['total_iec'] ).round(2) %>€</th>
+                  <th class="text-right"><%= (@cart['subtotal']+@cart['total_iva']+@cart['total_iec']).round(2) %>€</th>
                 </tr>
+
+                <% if @cart['total_points']>0 %>
+                    <tr class="table-row-highlighted">
+                      <th colspan="3">Subtotal Points</th>
+                      <th
+                      <% if @cart['total_points']>current_user.current_points %> style="color:red"
+                      <% end %> class="text-right">
+                        <%= (@cart['total_points']).round %>
+                      </th>
+                    </tr>
+                <% end %>
+
 
                 <tr class="table-row-highlighted table-cells-border">
                   <th colspan="3" style="border-top: 1px solid #B81D22">Total discount</th>
@@ -81,6 +98,8 @@
               <div class="col-md-6 text-right">
                 <%= submit_tag 'Update Cart', class: 'btn btn-primary btn-red' %>
                 <%= link_to 'Clear Cart', cart_clear_path, :method => :post, class: 'btn btn-primary btn-red' %>
+
+
                 <%= link_to 'Checkout', checkout_preview_path, class: 'btn btn-primary btn-red' %>
               </div>
             </div>

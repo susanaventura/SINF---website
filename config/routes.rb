@@ -27,8 +27,9 @@ Rails.application.routes.draw do
   post 'cart/remove', to: 'shopping_carts#remove_item', as: 'cart_remove'
   post 'cart/update', to: 'shopping_carts#update', as: 'cart_update'
   post 'cart/clear', to: 'shopping_carts#clear', as: 'cart_clear'
-  get 'cart/test', to: 'shopping_carts#test', as: 'cart_test'
 
+  get 'cart/test', to: 'shopping_carts#test', as: 'cart_test'
+  get 'cart/clear', to: 'shopping_carts#clear', as: 'cart_clear_get'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

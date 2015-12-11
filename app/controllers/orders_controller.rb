@@ -13,6 +13,10 @@ class OrdersController < ApplicationController
     if cart_empty?
       redirect_to checkout_overview_path
     end
+    if @cart['total_points'] > current_user.current_points
+      flash[:danger] = 'You do not have enough points to make this purchase'
+      redirect_to checkout_overview_path
+    end
   end
 
   def create

@@ -15,7 +15,9 @@
     </div>
   </td>
   <td class="text-center">
+
     <% if is_show_details %>
+        <!-- Checkout preview -->
         <%= "Unit price: #{price_unit}€" %>
         <% if valor_iec > 0.0 %>
             <br>--
@@ -31,16 +33,23 @@
         <br>IVA:
         <%= "#{iva_perc}% = #{iva_unit.round(2)}€" %>
         <br>--
-        <br><strong>Unit final price: <%= "#{(price_unit-discount_unit+iva_unit+valor_iec).round(2)}€" %> </strong>
+        <br>
+        <strong>
+          Unit final price:
+          <%= "#{(price_unit-discount_unit+iva_unit+valor_iec).round(2)}€" %>
+          <% if discount_perc==100 %> <br><%="(#{points_unit.round} Points)"%> <%end%>
+        </strong>
     <% else %>
+        <!-- Checkout overview -->
         <%= "#{(price_unit-discount_unit+iva_unit+valor_iec).round(2)}€" %>
+        <% if discount_perc==100 %> <br><%="(#{points_unit.round} Points)"%> <%end%>
     <% end %>
   </td>
 
   <td class="text-center">
     <% if is_update_form %>
-        <input name=<%= "cart[#{product['CodProduct']}]" %> type="number" value=<%= product['quantity'] %> min="0" max="100" step="1" class="custom-form-control">
-        <%= link_to({controller: 'shopping_carts', action: 'remove_item', item: product['CodProduct']}, :method => :post) do %>
+        <input name=<%= "cart[#{key}]" %> type="number" value=<%= product['quantity'] %> min="0" max="100" step="1" class="custom-form-control">
+        <%= link_to({controller: 'shopping_carts', action: 'remove_item', item: key}, :method => :post) do %>
             <span class="glyphicon glyphicon-remove"></span>
         <% end %>
     <% else %>
@@ -51,6 +60,7 @@
 
   <td class="text-center">
     <% if is_show_details %>
+        <!-- Checkout preview -->
         <%= "Products price: #{price_unit*quantity}€" %>
         <% if valor_iec> 0.0 %>
             <br>--
@@ -66,9 +76,16 @@
         <br>IVA:
         <%= "#{iva_perc}% = #{product_total_iva.round(2)}€" %>
         <br>--
-        <br><strong>Final price: <%= "#{(product_total_liquid + product_total_iva + product_total_iec).round(2)}€" %></strong>
+        <br>
+        <strong>
+          Final price:
+          <%= "#{(product_total_liquid + product_total_iva + product_total_iec).round(2)}€" %>
+          <% if discount_perc==100 %> <br><%="(#{product_total_points.round} Points)"%> <%end%>
+        </strong>
     <% else %>
+        <!-- Checkout overview -->
         <%= "#{(product_total_liquid + product_total_iva + product_total_iec).round(2)}€" %>
+        <% if discount_perc==100 %> <br><%="(#{product_total_points.round} Points)"%> <%end%>
     <% end %>
   </td>
 </tr>
