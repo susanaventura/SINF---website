@@ -2,7 +2,7 @@
   <div class="col-md-10 col-md-offset-1">
     <div class="back-links">
       <p>My account >> Order >>
-        <%= @order['CodOrder'] %></p>
+        <%= "#{@order['Serie']}-#{@order['NumDoc']}" %></p>
     </div>
   </div>
 </div>
@@ -31,17 +31,20 @@
             <%= render partial: 'layouts/order_items_list_item',
                        locals: {
                            product: product, show_details: true,
+                           key: product['CodProduct'],
                            quantity: product['Quantity'],
                            price_unit: product['UnitPrice'],
+                           points_unit: 0,
                            discount_perc: product['DiscountPerc'],
                            discount_unit: product['DiscountUnit'],
                            iva_perc: product['TaxaIva'],
                            iva_unit: ( product['TaxaIva']/100.0)*(product['UnitPrice']-product['DiscountUnit']),
                            valor_iec: product['ValorIEC'],
                            product_total_liquid: product['TotalLiq'],
-                           product_total_iva: product['TotalDiscount'],
-                           product_total_discount: product['TotalIva'],
-                           product_total_iec: product['TotalIEC']
+                           product_total_iva: product['TotalIva'],
+                           product_total_discount: product['TotalDiscount'],
+                           product_total_iec: product['TotalIEC'],
+                           product_total_points: 0
                        } %>
 
         <% end %>
@@ -62,19 +65,6 @@
           <th colspan="3">Total IVA</th>
           <th class="text-right"><%= "#{@order['TotalIva']}€" %></th>
         </tr>
-
-        <tr class="table-row-highlighted table-cells-border">
-          <th colspan="3">
-            Shipping
-            <br>
-
-            <p style="padding-left:5px">
-              <small>Method: CTT</small>
-            </p>
-          </th>
-          <th class="text-right"><%= "#{@order['TotalShippingCosts']}€" %></th>
-        </tr>
-
 
         <tr class="table-row-highlighted table-cells-border">
           <th colspan="3" style="border-top: 1px solid #B81D22">Total discount</th>

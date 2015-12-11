@@ -23,13 +23,15 @@ class OrdersController < ApplicationController
     user = find_user_with_pri_info(current_user.id)
     cart = get_cart
 
-    if user && cart && post_order(user,cart)
+    if user && user.current_points >= cart['total_points'] && cart && post_order(user,cart)
+      new_points = (@cart['subtotal'] + @cart['total_iec'] + @cart['total_iva']).floor
+      user.update_attribute(:current_points, user.current_points - cart['total_points'] + new_points)
       session.delete :cart
       get_cart
       redirect_to user_path(current_user)
     else
       flash[:danger] = 'Error submiting order. Please try again later'
-      redirect :back
+      redirect_back_or root_url
     end
   end
 
@@ -42,6 +44,11 @@ class OrdersController < ApplicationController
         redirect_to login_url
       end
     end
+
+  def redirect_back_or(url)
+    request.env["HTTP_REFERER"] ||= url
+    redirect_to :back
+  end
 
 
 end

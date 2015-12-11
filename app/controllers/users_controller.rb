@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @user = find_user_with_pri_info(params[:id])
-    @orders = get_user_orders(@user.username)
+    @orders = get_user_orders(@user.username).sort_by{ |o| o['Date']}.reverse
   end
 
   def new

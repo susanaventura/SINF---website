@@ -58,14 +58,6 @@
           <th class="text-right"><%= "#{@cart['subtotal'].round(2)}€" %></th>
         </tr>
 
-        <% if @cart['total_points']>0 %>
-            <tr class="table-row-highlighted">
-              <th colspan="3">Total Points</th>
-              <th class="text-right">
-                <h2><strong><%= (@cart['total_points']).round %></h2></strong>
-              </th>
-            </tr>
-        <% end %>
 
         <tr class="table-row-highlighted">
           <th colspan="3">Total IEC</th>
@@ -83,9 +75,20 @@
           <th class="text-right" style="border-top: 1px solid #B81D22"><%= @cart['total_discount'].round(2) %>€</th>
         </tr>
 
+        <% if @cart['total_points']>0 %>
+            <tr class="table-row-highlighted">
+              <th colspan="3" class="text-right"><h2><strong>Total Points</strong></h2></th>
+              <th class="text-right">
+                <h2><strong><%= (@cart['total_points']).round %></h2></strong>
+              </th>
+            </tr>
+        <% end %>
+
         <tr class="table-row-highlighted">
           <th colspan="3" class="text-right"><h2><strong>Final Billing Value</strong></h2></th>
-          <th class="text-right"><h2><strong><%= (@cart['subtotal'] + @cart['total_iec'] + @cart['total_iva']).round(2) %>€</strong></h2></th>
+          <th class="text-right">
+            <h2><strong><%= (@cart['subtotal'] + @cart['total_iec'] + @cart['total_iva']).round(2) %>€</strong></h2>
+          </th>
         </tr>
 
       </table>

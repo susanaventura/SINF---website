@@ -37,12 +37,12 @@
         <strong>
           Unit final price:
           <%= "#{(price_unit-discount_unit+iva_unit+valor_iec).round(2)}€" %>
-          <% if discount_perc==100 %> <br><%="(#{points_unit.round} Points)"%> <%end%>
+          <% if discount_perc==100 && product_total_points > 0%> <br><%="(#{points_unit.round} Points)"%> <%end%>
         </strong>
     <% else %>
         <!-- Checkout overview -->
         <%= "#{(price_unit-discount_unit+iva_unit+valor_iec).round(2)}€" %>
-        <% if discount_perc==100 %> <br><%="(#{points_unit.round} Points)"%> <%end%>
+        <% if discount_perc==100 && product_total_points > 0%> <br><%="(#{points_unit.round} Points)"%> <%end%>
     <% end %>
   </td>
 
@@ -80,12 +80,12 @@
         <strong>
           Final price:
           <%= "#{(product_total_liquid + product_total_iva + product_total_iec).round(2)}€" %>
-          <% if discount_perc==100 %> <br><%="(#{product_total_points.round} Points)"%> <%end%>
+          <% if discount_perc==100 && product_total_points > 0%> <br><%="(#{product_total_points.round} Points)"%> <%end%>
         </strong>
     <% else %>
         <!-- Checkout overview -->
         <%= "#{(product_total_liquid + product_total_iva + product_total_iec).round(2)}€" %>
-        <% if discount_perc==100 %> <br><%="(#{product_total_points.round} Points)"%> <%end%>
+        <% if discount_perc==100 && product_total_points > 0%> <br><%="(#{product_total_points.round} Points)"%> <%end%>
     <% end %>
   </td>
 </tr>

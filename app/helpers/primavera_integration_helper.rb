@@ -164,7 +164,9 @@ module PrimaveraIntegrationHelper
             'CodProduct' => item['CodProduct'],
             'Quantity' => item['quantity'],
             'ValorIEC' => item['IECValue'] || 0,
-            'Discount' => item['Discount'],
+            'DiscountPerc' => item['Discount'],
+            'TotalDiscount' => item['product_total_discount'],
+            'DiscountUnit' => item['discount_unit'],
             'UnitPrice' => item['Price']
         }
       end
