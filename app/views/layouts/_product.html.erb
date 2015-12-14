@@ -25,12 +25,12 @@
                  price = price_with_iva + p['IECValue']
               %>
               <% if p['Discount'] == 0.0 %>
-                  <p style="margin-bottom:0; padding-bottom:0;"><span class="rupees"><%= price.round(2) %>€</span>
+                  <p style="margin-bottom:0; padding-bottom:0;"><span class="rupees"><%= '%.2f' % price %>€</span>
                   </p>
               <% else %>
                   <p style="margin-bottom:0; padding-bottom:0;">
-                    <span class="rupees"><%= price.round(2) %>€</span>
-                    <del><%= p['Price'].round(2) %>€</del>
+                    <span class="rupees"><%= '%.2f' % price %>€</span>
+                    <del><%= '%.2f' % p['Price'] %>€</del>
                   </p>
               <% end %>
           <% end %>

@@ -41,7 +41,7 @@
             <tr>
               <td><%= "#{o['Serie']}-#{o['NumDoc']}"%></td>
               <td><%=o['Date'].to_time.to_formatted_s(:long)%></td>
-              <td><%=o['Total'].round(2)%>€</td>
+              <td><%='%.2f' % o['Total']%>€</td>
               <td><%=o['Status']%></td>
               <td>
                 <!--<a href="#">Download bill</a>
@@ -51,6 +51,8 @@
             </tr>
 
         <% end %>
+
+        <% if @orders.empty? %> <p>No orders.</p><%end%>
       </table>
     </div>
 

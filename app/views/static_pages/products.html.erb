@@ -7,8 +7,6 @@
 
   <div class="col-md-9">
 
-    <% remaining_points = [0, (current_user.current_points - @cart['total_points']).round].max%>
-
     <div class="row">
       <div class="col-md-12">
         <% if params[:filterPoints] %>
@@ -20,7 +18,7 @@
         <% if params[:codStore] %>
             <div class="back-links">
               <p>Stores >>
-                <%= @stores[params[:codStore]]['name']%></p>
+                <%= @stores[params[:codStore]]['name']%> <% if !(@stores[params[:codStore]]['address'].blank?)%> - <%= @stores[params[:codStore]]['address']%> <%end%></p>
             </div>
         <% end %>
         <% if params[:codCategory] %>

@@ -1,8 +1,11 @@
 class StaticPagesController < ApplicationController
+  before_action :logged_in_user, only: [:points_store]
+
   def home
     @products_on_sale = OnlineStoreWeb::Application::STATIC_ASSETS[:products_on_sale]['products']
     @products_last_sold = get_products(filterLastSold: true, pageLength: 3)['products']
     @products_new = get_products(sortDate: true, pageLength: 3)['products']
+
   end
 
   def products
@@ -46,7 +49,14 @@ class StaticPagesController < ApplicationController
     end
   end
 
-
+private
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = 'Please log in.'
+      redirect_to login_url
+    end
+  end
 
 end
 

@@ -9,4 +9,8 @@ module UsersHelper
     end
   end
 
+  def remaining_points
+    logged_in? ? [0, (current_user.current_points - @cart['total_points']).round].max : 0
+  end
+
 end

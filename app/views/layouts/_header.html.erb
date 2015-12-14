@@ -7,7 +7,6 @@
       <% if logged_in? %>
           <li><%= current_user.username %></li>
           <li><%= link_to 'My Account', user_path(current_user) %></li>
-          <li><%= link_to 'Delivery', '#' %></li>
           <li><%= link_to 'Checkout', checkout_overview_path %></li>
           <li><%= link_to 'Log Out', logout_path, method: 'delete' %></li>
       <% else %>
@@ -27,7 +26,7 @@
   <div class="cart">
     <p>Welcome to our Online Store! <%= link_to checkout_overview_path do %> <span>Cart:</span> <%end%>
 
-    <div id="dd" class="wrapper-dropdown-2">  <%= "#{cart['total_items']} item(s) - #{(cart['subtotal'] + cart['total_iva'] + cart['total_iec']).round(2)}€" %>
+    <div id="dd" class="wrapper-dropdown-2">  <%= "#{cart['total_items']} item(s) - #{'%.2f' % (cart['subtotal'] + cart['total_iva'] + cart['total_iec'])}€" %>
       <ul class="dropdown">
         <% if cart_empty? %>
             <li>You have no items in your Shopping cart</li>
@@ -36,7 +35,7 @@
                 <li>
                   <%= "#{item['quantity']}x "%>
                   <%= link_to truncate(item['Description']), product_path(item['CodProduct']) %>
-                  <%=" - #{(item['product_total_liquid'] + item['product_total_iva'] + item['product_total_iec']).round(2)}€" %>
+                  <%=" - #{'%.2f' %(item['product_total_liquid'] + item['product_total_iva'] + item['product_total_iec'])}€" %>
                 </li>
             <% end %>
         <% end %>

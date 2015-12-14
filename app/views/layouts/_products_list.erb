@@ -1,9 +1,9 @@
 <div class="row row-products">
 
-  <% remaining_points = [0, (current_user.current_points - @cart['total_points']).round].max%>
+
   <% products.each do |p| %>
 
-      <%= render partial: 'layouts/product', locals: {p: p, remaining_points: remaining_points} %>
+      <%= render partial: 'layouts/product', locals: {p: p} %>
 
   <% end %>
 </div>
