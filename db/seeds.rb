@@ -22,3 +22,12 @@ Image.create!({ product: 'A0007.PRETO', path: 'products/preto.jpg' })
 Image.create!({ product: 'B0002', path: 'products/rsz_dvd_usb_20.jpg' })  
 Image.create!({ product: 'A0005', path: 'products/Table.jpg' }) 
 #Add entries here
+
+
+# Create secondary images
+images = Image.all
+images.each do |img|
+  Image.create!({product: img.product, path: img.path, secondary: true })
+  Image.create!({product: img.product, path: img.path, secondary: true })
+  Image.create!({product: img.product, path: img.path, secondary: true })
+end

@@ -23,17 +23,21 @@
             <div class="item active">
               <div class="col-md-12 col-sm-12">
 
-                <%= image_tag get_image_for_product(@product), class: 'img-responsive center-block' %>
+                <%= image_tag @images[:main_image], class: 'img-responsive center-block' %>
 
               </div>
             </div>
 
             <!-- TODO adicionar aqui o resto das imagens -->
-            <div class="item">
-              <div class="col-md-12 col-sm-12">
-                <%= image_tag get_image_for_product(@product), class: 'img-responsive center-block' %>
+            <% @images[:secondary_images].each do |image| %>
+
+              <div class="item">
+                <div class="col-md-12 col-sm-12">
+                  <%= image_tag image, class: 'img-responsive center-block' %>
+                </div>
               </div>
-            </div>
+
+            <% end %>
             <!-- -->
 
           </div>

@@ -25,6 +25,7 @@ class StaticPagesController < ApplicationController
     if !@product
       redirect_to home_path
     end
+    @images = get_images_for_product(@product)
     @related_products = get_products(codCategory: @product['Category'], pageLength: 3)['products'].reject { |h| @product['CodProduct'].include? h['CodProduct'] }
   end
 
