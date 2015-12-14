@@ -61,6 +61,8 @@
             <h4><%= link_to 'Add to Cart', {controller: 'shopping_carts', action: 'add_item', item: p['CodProduct'] }, :method => :post %></h4>
         <% elsif (remaining_points || 0) >= p['Points'].round()%>
             <h4><%= link_to 'Add to Cart', {controller: 'shopping_carts', action: 'add_item', item: p['CodProduct'], points: true }, :method => :post %></h4>
+        <%else%>
+            <h4 style="visibility:hidden"><a href="">Add to Cart</a></h4>
         <% end %>
       </div>
     </div>
