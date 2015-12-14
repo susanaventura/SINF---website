@@ -16,20 +16,25 @@
 
     <div class="row">
       <div class="col-md-5">
-
-        <div id="myCarouselProductImgs" class="carousel slide" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
               <div class="col-md-12 col-sm-12">
-                <div style="width:42%">
-                  <%= image_tag get_image_for_product(@product['CodProduct']), class: 'img-responsive center-block' %>
-                </div>
-                <div class="clear"></div>
+
+                <%= image_tag get_image_for_product(@product), class: 'img-responsive center-block' %>
+
               </div>
             </div>
 
+            <!-- TODO adicionar aqui o resto das imagens -->
+            <div class="item">
+              <div class="col-md-12 col-sm-12">
+                <%= image_tag get_image_for_product(@product), class: 'img-responsive center-block' %>
+              </div>
+            </div>
+            <!-- -->
 
           </div>
 
@@ -62,9 +67,9 @@
         </div>
         <div>
           <p>IVA: <span><%= @product['IVAValue'] %>%</span>
-          <% if (@product['IECValue']) %>
-              IEC: <span><%= '%.2f' % @product['IECValue'] %> <%= @product['Currency'] %></span>
-          <% end %>
+            <% if (@product['IECValue']) %>
+                IEC: <span><%= '%.2f' % @product['IECValue'] %> <%= @product['Currency'] %></span>
+            <% end %>
           </p>
         </div>
 
@@ -75,7 +80,7 @@
 
         <div class="button" style="float:left">
           <span>
-            <%= link_to 'Add to Cart', {controller: 'shopping_carts', action: 'add_item', item: @product['CodProduct'] }, :method => :post %>
+            <%= link_to 'Add to Cart', {controller: 'shopping_carts', action: 'add_item', item: @product['CodProduct']}, :method => :post %>
           </span>
         </div>
         <div class="clear"></div>
