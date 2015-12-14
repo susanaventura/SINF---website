@@ -238,3 +238,8 @@ p.discount{
     font-family: Arial, Helvetica, sans-serif;
     margin:0
 }
+
+.carousel-inner a:hover{
+    color:white;
+    text-decoration:none;
+}

@@ -27,7 +27,8 @@
               <div class="features_list">
                 <h4><%= p['Description'] %></h4>
               </div>
-              <a href="preview.html" class="button">View product</a>
+              <%= link_to 'View product', product_path(p['CodProduct']), class:'button' %>
+
             </div>
             <div class="clear"></div>
           </div>
