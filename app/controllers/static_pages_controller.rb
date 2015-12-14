@@ -3,14 +3,17 @@ class StaticPagesController < ApplicationController
 
   def home
     @products_on_sale = OnlineStoreWeb::Application::STATIC_ASSETS[:products_on_sale]['products']
-    @products_last_sold = get_products(filterLastSold: true, pageLength: 3)['products']
-    @products_new = get_products(sortDate: true, pageLength: 3)['products']
-
+    @products_last_sold = get_products(sort: 'lastsold', pageLength: 3)['products']
+    @products_new = get_products(sort: 'datenewest', pageLength: 3)['products']
   end
 
   def products
+    if params[:filterPoints]
+      logged_in_user
+    end
+
     params[:page] ||= 1
-    pri_products = get_products(params.permit(:page, :codStore, :codCategory, :filterOnSale, :filterPoints, :pageLength, :searchString, :filterLastSold, :sortDate))
+    pri_products = get_products(params.permit(:page, :codStore, :codCategory, :filterOnSale, :filterPoints, :pageLength, :searchString, :sort))
     if pri_products
       @products = WillPaginate::Collection.create(params[:page], pri_products['pageSize'], pri_products['numResults']) do |pager|
         pager.replace(pri_products['products'])
@@ -26,7 +29,8 @@ class StaticPagesController < ApplicationController
       redirect_to home_path
     end
     @images = get_images_for_product(@product)
-    @related_products = get_products(codCategory: @product['Category'], pageLength: 3)['products'].reject { |h| @product['CodProduct'].include? h['CodProduct'] }
+    @related_products = get_products(codCategory: @product['Category'], pageLength: 4, sort: 'lastsold')['products'].reject { |h| @product['CodProduct'].include? h['CodProduct'] }
+    @related_products = @related_products.slice(0,3)
   end
 
   def stores_index

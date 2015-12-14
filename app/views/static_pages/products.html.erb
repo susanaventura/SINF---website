@@ -1,5 +1,45 @@
 <div class="row">
   <div class="col-md-3">
+
+    <div class="categories">
+      <ul>
+        <h3>Order By</h3>
+        <li><%= link_to 'Last Sold', params.merge(sort: 'lastsold') %></li>
+        <li><%= link_to 'Price (Lowest First)', params.merge(sort: 'pricelowest') %></li>
+        <li><%= link_to 'Price (Highest First)', params.merge(sort: 'pricehighest') %></li>
+        <li><%= link_to 'Date (Most Recent)', params.merge(sort: 'datenewest') %></li>
+        <li><%= link_to 'Date (Least Recent)', params.merge(sort: 'dateoldest') %></li>
+        <%if params[:sort]%>  <li><%= link_to 'Clear Ordering', params.except(:sort) %></li> <%end%>
+      </ul>
+    </div>
+
+    <div class="categories">
+      <ul>
+        <h3>Filters</h3>
+        <!-- Clears -->
+        <% if params[:codCategory] %>
+          <li><%= link_to 'Clear Category', params.except(:codCategory) %></li>
+        <%end%>
+        <% if params[:codStore] %>
+            <li><%= link_to 'Clear Store', params.except(:codStore) %></li>
+        <%end%>
+        <% if params[:filterPoints] %>
+            <li><%= link_to 'Clear Points Store', params.except(:filterPoints) %></li>
+        <%end%>
+        <% if params[:filterOnSale] %>
+            <li><%= link_to 'Clear On Sale', params.except(:filterOnSale) %></li>
+        <%end%>
+
+        <!-- Shows -->
+        <% if logged_in? && !params[:filterPoints] %>
+          <li><%= link_to 'Show Points Store', params.merge(filterPoints: true) %></li>
+        <% end %>
+        <% if !params[:filterOnSale] %>
+          <li><%= link_to 'Show On Sale', params.merge(filterOnSale: true) %></li>
+        <% end %>
+      </ul>
+    </div>
+
     <%= render partial: 'layouts/categories_list', locals: {categories: @categories} %>
     <%= render partial: 'layouts/stores_list', locals: {stores: @stores} %>
   </div>
@@ -11,28 +51,30 @@
       <div class="col-md-12">
         <% if params[:filterPoints] %>
             <h1 class="title-page">Points store</h1>
+
             <p>Available points: <%= remaining_points %></p>
         <% end %>
-        <% if params[:filterOnSale] %><h1 class="title-page">On sale</h1>
+
+        <% if params[:filterOnSale] %>
+            <h1 class="title-page">On sale</h1>
         <% end %>
-        <% if params[:codStore] %>
-            <div class="back-links">
-              <p>Stores >>
-                <%= @stores[params[:codStore]]['name']%> <% if !(@stores[params[:codStore]]['address'].blank?)%> - <%= @stores[params[:codStore]]['address']%> <%end%></p>
-            </div>
-        <% end %>
-        <% if params[:codCategory] %>
-            <div class="back-links">
-              <p>Categories >>
-               <%= @categories[params[:codCategory]]['name'] %></p>
-            </div>
-        <% end %>
-        <% if params[:searchString] %>
-            <div class="back-links">
-              <p>Search >>
-                <%= params[:searchString] %></p>
-            </div>
-        <%end%>
+
+        <div class="back-links">
+          <% if params[:codStore] && @stores[params[:codStore]] %>
+              <p>Stores >>  <%= @stores[params[:codStore]]['name'] %>
+                <% if !(@stores[params[:codStore]]['address'].blank?) %> - <%= @stores[params[:codStore]]['address'] %>
+                <% end %></p>
+          <% end %>
+          <% if params[:codCategory] && @categories[params[:codCategory]] %>
+              <p>Categories >> <%= @categories[params[:codCategory]]['name'] %> </p>
+          <% end %>
+          <% if params[:searchString] %>
+              <p>Search >> <%= params[:searchString] %></p>
+          <% end %>
+          <% if (sort_name = get_sort_name(params[:sort])) %>
+              <p>Order >> <%= sort_name %></p>
+          <% end %>
+        </div>
       </div>
     </div>
 
