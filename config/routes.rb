@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get 'cart/test', to: 'shopping_carts#test', as: 'cart_test'
   get 'cart/clear', to: 'shopping_carts#clear', as: 'cart_clear_get'
 
+  get 'about' => 'static_pages#about'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
