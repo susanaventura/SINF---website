@@ -28,7 +28,6 @@
               </div>
             </div>
 
-            <!-- TODO adicionar aqui o resto das imagens -->
             <% @images[:secondary_images].each do |image| %>
 
               <div class="item">
@@ -63,6 +62,7 @@
         <%
            price_liquid = @product['Price']
            price_with_discount = price_liquid - @product['Discount']/100 * @product['Price']
+           price_without_discount = (price_liquid* (1 + @product['IVAValue']/100)) + @product['IECValue']
            price_with_iva = price_with_discount * (1 + @product['IVAValue']/100)
            price = price_with_iva + @product['IECValue']
         %>
@@ -79,7 +79,7 @@
 
 
         <% if @product['Discount'] > 0.0 %>
-            <p class="discount">On sale: <%= '%.2f' % @product['Discount'] %>%</p>
+            <p class="discount">On sale: <%= '%.2f' % @product['Discount'] %>%  (<del><%= '%.2f' % price_without_discount %>€</del>)</p>
         <% end %>
 
         <div class="button" style="float:left">

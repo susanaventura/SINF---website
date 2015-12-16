@@ -21,8 +21,10 @@
               <%
                  price_liquid = p['Price']
                  price_with_discount = price_liquid - p['Discount']/100 * p['Price']
+                 price_without_discount = (price_liquid* (1 + p['IVAValue']/100)) + p['IECValue']
                  price_with_iva = price_with_discount * (1 + p['IVAValue']/100)
                  price = price_with_iva + p['IECValue']
+
               %>
               <% if p['Discount'] == 0.0 %>
                   <p style="margin-bottom:0; padding-bottom:0;"><span class="rupees"><%= '%.2f' % price %>€</span>
@@ -30,7 +32,7 @@
               <% else %>
                   <p style="margin-bottom:0; padding-bottom:0;">
                     <span class="rupees"><%= '%.2f' % price %>€</span>
-                    <del><%= '%.2f' % p['Price'] %>€</del>
+                    <del><%= '%.2f' % price_without_discount %>€</del>
                   </p>
               <% end %>
           <% end %>
