@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :logged_in_user, only: [:checkout_preview, :user]
+  before_action :logged_in_user, only: [:show, :checkout_preview, :create]
 
   def show
     @order = get_order(params.to_param)
@@ -46,7 +46,7 @@ class OrdersController < ApplicationController
     end
 
   def redirect_back_or(url)
-    request.env["HTTP_REFERER"] ||= url
+    request.env['HTTP_REFERER'] ||= url
     redirect_to :back
   end
 
