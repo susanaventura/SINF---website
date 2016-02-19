@@ -43,3 +43,13 @@ Image.create!({ product: 'A0010', path: 'products/teclado_teste_main.jpg' })
 Image.create!({product: 'A0010', path: 'products/teclado_teste_sec1.jpg', secondary: true })
 Image.create!({product: 'A0010', path: 'products/teclado_teste_sec2.jpg', secondary: true })
 Image.create!({product: 'A0010', path: 'products/teclado_teste_sec3.jpg', secondary: true })
+
+Image.create!({ product: 'A0011', path: 'products/teclado_teste_main.jpg' }) 
+Image.create!({product: 'A0011', path: 'products/teclado_teste_sec1.jpg', secondary: true })
+Image.create!({product: 'A0011', path: 'products/teclado_teste_sec2.jpg', secondary: true })
+Image.create!({product: 'A0011', path: 'products/teclado_teste_sec3.jpg', secondary: true })
+
+Image.create!({ product: 'A0012', path: 'products/teclado_teste_main.jpg' }) 
+Image.create!({product: 'A0012', path: 'products/teclado_teste_sec1.jpg', secondary: true })
+Image.create!({product: 'A0012', path: 'products/teclado_teste_sec2.jpg', secondary: true })
+Image.create!({product: 'A0012', path: 'products/teclado_teste_sec3.jpg', secondary: true })

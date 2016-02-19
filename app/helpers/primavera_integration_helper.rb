@@ -170,6 +170,7 @@ module PrimaveraIntegrationHelper
             'UnitPrice' => item['Price']
         }
       end
+      puts order.to_json
       return order.to_json
     end
 end
